@@ -2,8 +2,6 @@ import { NextResponse } from "next/server";
 import connectToMongodb from "../../../lib/mongodb";
 import Comment from "../../../models/comment";
 
-export const dynamic = 'force-static'
-
 export async function POST (request){
 
     const {author,text,date} = await request.json();
