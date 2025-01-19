@@ -36,7 +36,7 @@ const Blogs = () => {
   const handleDeleteBlog = async () => {
         setIsModalOpen(true)
     try {
-      const res = await fetch(`http://localhost:3000/api/blogs/${selectedBlogId}`, {
+      const res = await fetch(`https://charbagh.vercel.app/api/blogs/${selectedBlogId}`, {
         method: "DELETE"
       });
 
