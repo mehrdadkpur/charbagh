@@ -2,7 +2,6 @@ import { NextResponse } from "next/server";
 import connectToMongodb from "../../../lib/mongodb";
 import Blog from "../../../models/blog";
 
-export const dynamic = 'force-static'
 
 export async function POST(request) {
     try {
@@ -33,7 +32,6 @@ export async function POST(request) {
         }, { status: 500 })
     }
 }
-
 
 export async function GET (){
     await connectToMongodb();
