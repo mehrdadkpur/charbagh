@@ -3,8 +3,6 @@ import connectToMongodb from "../../../lib/mongodb";
 import Teacher from"@/models/teacher"
 import { hashPassword } from '@/lib/password'
 
-export const dynamic = 'force-static'
-
 export const POST = async (request) => {
     try {
         await connectToMongodb()

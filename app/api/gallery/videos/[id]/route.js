@@ -2,8 +2,6 @@ import connectToMongodb from "@/lib/mongodb";
 import { NextResponse } from "next/server";
 import Video from "@/models/video";
 
-export const dynamic = 'force-static'
-
 export async function GET(request , { params }) {
   const { id } = params
   

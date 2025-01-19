@@ -8,8 +8,6 @@ import Videos from '@/models/video'
 import Instruments from '@/models/instrument'
 import Blogs from '@/models/blog'
 
-export const dynamic = 'force-static'
-
 export async function GET() {
   try {
     await connectToMongodb()

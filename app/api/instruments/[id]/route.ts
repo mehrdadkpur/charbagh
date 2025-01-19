@@ -10,8 +10,6 @@ interface RouteSegment {
     }>
 }
 
-export const dynamic = 'force-static'
-
 export async function PUT(request: NextRequest, { params }: RouteSegment) {
     const { id } =await params;
 

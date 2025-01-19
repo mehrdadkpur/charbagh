@@ -11,8 +11,6 @@ interface RouteParams {
     }>
 }
 
-export const dynamic = 'force-static'
-
 export async function GET( request: NextRequest, { params }: RouteParams) {
     const { id, bookId } = await params
     await connectToMongodb()

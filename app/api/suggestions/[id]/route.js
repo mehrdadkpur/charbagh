@@ -2,8 +2,6 @@ import connectToMongodb from "@/lib/mongodb";
 import Suggestion from "@/models/suggestion";
 import { NextResponse } from "next/server";
 
-export const dynamic = 'force-static'
-
 export async function PUT (request , {params}){
     const {id} = params;
     const {

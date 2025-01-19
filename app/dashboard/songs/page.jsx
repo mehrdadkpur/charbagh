@@ -34,7 +34,11 @@ const Instruments = () => {
   const handleDeleteSong = async () => {
         setIsModalOpen(true)
     try {
+<<<<<<< HEAD
       const res = await fetch(`/api/songs/${selectedInstrumentId}`, {
+=======
+      const res = await fetch(`https://charbagh.vercell.app/api/songs/${selectedInstrumentId}`, {
+>>>>>>> 9f17a79af0fd41bde741ffa920b9443c68de7ab0
         method: "DELETE"
       });
 
