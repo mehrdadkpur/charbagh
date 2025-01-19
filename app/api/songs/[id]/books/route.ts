@@ -2,8 +2,6 @@ import { NextRequest, NextResponse } from 'next/server';
 import connectToMongodb from "@/lib/mongodb";
 import Song from "@/models/song";
 
-export const dynamic = 'force-static'
-
 interface RouteSegment {
     params: Promise<{
         id: string
