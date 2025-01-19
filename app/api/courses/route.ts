@@ -2,8 +2,6 @@ import { NextRequest, NextResponse } from "next/server";
 import connectToMongodb from "../../../lib/mongodb";
 import Course from "../../../models/course";
 
-export const dynamic = 'force-static'
-
 interface CourseData {
     course_name: string;
     course_teachers: string[];
