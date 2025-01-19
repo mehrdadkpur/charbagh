@@ -4,9 +4,6 @@ import { unlink } from 'fs/promises';
 import path from 'path';
 import { NextRequest } from "next/server";
 
-export const dynamic = 'force-static'
-
-
 interface RouteParams {
     params: Promise<{
         id: string;
