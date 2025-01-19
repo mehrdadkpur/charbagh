@@ -1,0 +1,49 @@
+{
+  "compilerOptions": {
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": [
+        "./*"
+      ]
+    },
+    "target": "ES2017"
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "app/components/Achivements.jsx",
+    "app/musicAcademy/(songs)/page.jsx",
+    "app/components/Suggestions.tsx",
+    "app/musicAcademy/(songs)/[instrumentsId]/categories/[category]/page.jsx",
+    "app/musicAcademy/teachers/[teacher]/page.jsx",
+    "app/musicAcademy/courses/[course]/page.jsx",
+    "app/musicAcademy/courses/page.jsx",
+    "app/musicAcademy/songs/[categoryId]/page.jsx",
+    "app/dashboard/page.jsx"
+, "app/blogs/page.jsx", "app/api/auth/[...nextauth]/options.js", "app/login/page.tsx", "lib/password.js", "app/ui/components/ProfileNav.tsx", "lib/jwt.ts", "app/ui/components/Search.jsx", "app/dashboard/songs/[id]/add-book/AddBookForm.jsx", "app/api/songs/[id]/books/route.ts", "app/dashboard/songs/[id]/add-book/page.jsx", "app/gallery/page.jsx", "app/api/gallery/photos/route.js", "app/dashboard/gallery/videos/AddVideoForm.jsx", "app/api/instruments/route.js", "app/dashboard/blogs/AddBlogForm.jsx", "app/user/profile/page.tsx", "app/songs/[id]/page.jsx"  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
