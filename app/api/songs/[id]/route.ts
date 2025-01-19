@@ -4,8 +4,6 @@ import Song from "../../../../models/song";
 import path from 'path';
 import { unlink } from 'fs/promises';
 
-export const dynamic = 'force-static'
-
 interface RouteSegment {
     params: Promise<{
         id: string
