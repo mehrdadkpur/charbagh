@@ -2,8 +2,6 @@ import { NextResponse } from "next/server";
 import connectToMongodb from "@/lib/mongodb";
 import Photo from "@/models/photo";
 
-export const dynamic = 'force-static'
-
 export async function POST(request) {
     try {
         await connectToMongodb()
