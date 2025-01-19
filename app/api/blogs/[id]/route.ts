@@ -4,8 +4,6 @@ import { NextResponse , NextRequest } from "next/server";
 import path from 'path'
 import fs from 'fs/promises';
 
-export const dynamic = 'force-static'
-
 
 interface RouteSegment {
     params: Promise<{
