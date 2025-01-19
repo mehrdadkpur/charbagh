@@ -2,8 +2,6 @@ import connectToMongodb from "@/lib/mongodb"
 import Guidance from "@/models/guidance"
 import { NextRequest, NextResponse } from "next/server"
 
-export const dynamic = 'force-static'
-
 export async function POST(request:NextRequest) {
     try {
         await connectToMongodb()
