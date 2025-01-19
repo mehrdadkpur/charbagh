@@ -4,8 +4,6 @@ import Teacher from '@/models/teacher'
 import Student from '@/models/student'
 import connectToMongodb from '@/lib/mongodb'
 
-export const dynamic = 'force-static'
-
 export async function GET(req: NextRequest) {
   try {
     const cookieHeader = req.headers.get('cookie')
