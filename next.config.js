@@ -1,9 +1,10 @@
-const nextConfig = {
+/** @type {import('next').NextConfig} */
+const config = {
   output: 'export',
+  basePath: process.env.NEXT_PUBLIC_BASE_PATH || '',
   images: {
-    unoptimized: true,
-  },
-  // other config options
+    unoptimized: true
+  }
 }
 
-export default nextConfig
+export default config
