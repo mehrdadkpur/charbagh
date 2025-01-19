@@ -2,8 +2,6 @@ import { writeFile, mkdir, unlink } from 'fs/promises'
 import { NextRequest } from 'next/server'
 import { join } from 'path'
 
-export const dynamic = 'force-static'
-
 export async function POST(req: NextRequest) {
     try {
       const formData = await req.formData()
