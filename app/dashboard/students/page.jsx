@@ -10,7 +10,7 @@ import Image from "next/image";
 
 
 const getStudents = async () => {
-    const response = await fetch('http://localhost:3000/api/students');
+    const response = await fetch('/api/students');
     if (!response.ok) {
       throw new Error('Failed to fetch students');
     }

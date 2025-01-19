@@ -10,7 +10,7 @@ import toast from "react-hot-toast";
 
 
 const getTeachers = async () => {
-    const response = await fetch('http://localhost:3000/api/teachers');
+    const response = await fetch('/api/teachers');
     if (!response.ok) {
       throw new Error('Failed to fetch teachers');
     }

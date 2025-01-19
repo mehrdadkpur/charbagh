@@ -53,7 +53,7 @@ const Books = () => {
       const handleDeleteBook = async () => {
             setIsModalOpen(true)
         try {
-          const res = await fetch(`http://localhost:3000/api/songs/${id}/books/${selectedBookId}`, {
+          const res = await fetch(`/api/songs/${id}/books/${selectedBookId}`, {
             method: "DELETE"
           });
     

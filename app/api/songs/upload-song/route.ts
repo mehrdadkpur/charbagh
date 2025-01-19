@@ -1,4 +1,4 @@
-import { writeFile, mkdir } from 'fs/promises'
+import { writeFile } from 'fs/promises'
 import { join } from 'path'
 import { unlink } from 'fs/promises';
 
@@ -8,7 +8,6 @@ export async function POST(request: Request) {
         const file = formData.get('file') as File;
         const song_name = formData.get('songTitle') as string;
         const song_artist = formData.get('songArtist') as string;
-        const song_url = formData.get('previousSongUrl') as string;
         const previousSongUrl = formData.get('previousUrl') as string | null;
 
         const baseDir = 'public/uploads/songs';
@@ -17,14 +16,9 @@ export async function POST(request: Request) {
 
         if (previousSongUrl) {
             const previousSongFileName = previousSongUrl.split('/uploads/songs/').pop();
-            console.log('Previous Filename:', previousSongFileName); // Log for debugging
-
             if (previousSongFileName) {
                 const previousFilePath = join(process.cwd(), baseDir, previousSongFileName);
-                console.log('Previous File Path:', previousFilePath); // Log for debugging
-
                 await unlink(previousFilePath);
-                console.log('Successfully deleted:', previousSongFileName); // Log for debugging
             }
         }
 
@@ -33,8 +27,6 @@ export async function POST(request: Request) {
         const originalExtension = file.name.split('.').pop();
         const uniqueFileName = `${song_name}_${song_artist}_${Date.now()}.${originalExtension}`;
         const filePath = join(process.cwd(), baseDir, uniqueFileName);
-
-        console.log('New File Path:', filePath); // Log for debugging
 
         await writeFile(filePath, new Uint8Array(buffer));
         const url = `/uploads/songs/${uniqueFileName}`;
