@@ -35,7 +35,6 @@ const Instruments = () => {
         setIsModalOpen(true)
     try {
       const res = await fetch(`/api/songs/${selectedInstrumentId}`, {
-
         method: "DELETE"
       });
 
