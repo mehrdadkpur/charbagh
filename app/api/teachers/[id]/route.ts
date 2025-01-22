@@ -5,10 +5,6 @@ import { NextRequest, NextResponse } from "next/server";
 import path from 'path'
 import fs from 'fs/promises'
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 9f17a79af0fd41bde741ffa920b9443c68de7ab0
 interface RouteSegment {
     params: Promise<{
         id: string
