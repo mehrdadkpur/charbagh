@@ -11,7 +11,6 @@ interface IVideo {
     url: string
     videoDate: string
     description: string
-    
 }
 
 

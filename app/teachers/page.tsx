@@ -14,10 +14,10 @@ const Teachers =  async () => {
                         <div className="flex justify-between items-center flex-col gap-y-10">
                             <div className="flex flex-col md:flex justify-between items-center gap-y-5 md:gap-x-3">
                                 <div className="flex justify-center items-center bg-white rounded-3xl ">
-                                    <Image priority width={400} height={400} className="rounded-3xl" src="/images/teachers/09.png" alt="teacherName" />
+                                    <Image priority width={400} height={400} className="rounded-3xl" src="/images/teachers/01.png" alt="teacherName" />
                                 </div>
                                 <div className="flex justify-center items-center bg-white rounded-3xl">
-                                    <Image priority width={400} height={400}  className="rounded-3xl " src="/images/teachers/10.png" alt="teacherName" />
+                                    <Image priority width={400} height={400}  className="rounded-3xl " src="/images/teachers/02.png" alt="teacherName" />
                                 </div>
                             </div> 
                         <div className="flex flex-col gap-y-5 md:flex justify-between items-center">

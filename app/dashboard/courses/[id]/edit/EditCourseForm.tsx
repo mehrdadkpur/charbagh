@@ -1,6 +1,7 @@
 'use client'
+
 import Link from 'next/link'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, ChangeEvent, FormEvent } from 'react'
 import { useParams, useRouter } from 'next/navigation'
 import Loading from '@/app/loading'
 import { fetchTeachersName } from '@/lib/teachersName'
@@ -12,10 +13,10 @@ interface FormFields {
     course_teachers: string[]
     course_description: string
     course_img?: string
-    course_status:string
+    course_status: string
 }
 
-interface ICourse {
+interface Teacher {
     _id: string
     firstname: string
     lastname: string
@@ -25,15 +26,15 @@ const EditCourseForm = () => {
     const { id } = useParams()
     const router = useRouter()
 
-    const [teachers, setTeachers] = useState<ICourse[]>([])
+    const [teachers, setTeachers] = useState<Teacher[]>([])
     const [fields, setFields] = useState<FormFields>({
         course_name: "",
         course_teachers: [],
         course_description: "",
-        course_status:"فعال",
-        course_img:""
+        course_status: "فعال",
+        course_img: ""
     })
-    const [imagePreview, setImagePreview] = useState(fields.course_img);
+    const [imagePreview, setImagePreview] = useState<string>("")
     const [uploading, setUploading] = useState(false)
     const [loading, setLoading] = useState(true)
 
@@ -48,30 +49,25 @@ const EditCourseForm = () => {
                 const courseData = await courseResponse.json()
                 setFields(courseData)
                 setTeachers(teachersData)
-            } catch (error) {
             } finally {
                 setLoading(false)
             }
         }
 
         if (id) fetchData()
-    }, [id]);
+    }, [id])
 
     useEffect(() => { 
-        setImagePreview(fields.course_img); 
-    }, [fields.course_img]);
+        setImagePreview(fields.course_img || "") 
+    }, [fields.course_img])
 
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-        setFields(prev => ({
-            ...prev,
-            [e.target.name]: e.target.value
-        }))
+    const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+        const { name, value } = e.target
+        setFields(prev => ({ ...prev, [name]: value }))
     }
-    
 
-    const handleSubmit = async (e: React.FormEvent) => {
+    const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault()
-
         try {
             const response = await fetch(`/api/courses/${id}`, {
                 method: 'PUT',
@@ -80,16 +76,16 @@ const EditCourseForm = () => {
             })
 
             if (response.ok) {
-                router.push('/dashboard/courses');
+                router.push('/dashboard/courses')
                 toast.success('دوره مورد نظر با موفقیت ویرایش شد')
             }
         } catch (error) {
-            toast.error('خطا در ویرایش دوره' )
+            toast.error('خطا در ویرایش دوره')
             console.error('Error updating Course:', error)
         }
     }
 
-    const handleCheckboxChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const handleCheckboxChange = (e: ChangeEvent<HTMLInputElement>) => {
         const { name, checked } = e.target
         setFields(prev => ({
             ...prev,
@@ -99,30 +95,31 @@ const EditCourseForm = () => {
         }))
     }
 
-    const handleImageUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const handleImageUpload = async (e: ChangeEvent<HTMLInputElement>) => {
         const file = e.target.files?.[0]
         if (!file) return
-    
-        // Create preview
+
         const reader = new FileReader()
         reader.onloadend = () => {
             setImagePreview(reader.result as string)
         }
         reader.readAsDataURL(file)
-    
+
         setUploading(true)
         const formData = new FormData()
         formData.append('file', file)
         formData.append('courseName', fields.course_name)
 
-        if (fields.course_img) formData.append('previousUrl', fields.course_img);
-    
+        if (fields.course_img) {
+            formData.append('previousUrl', fields.course_img)
+        }
+
         try {
             const response = await fetch('/api/courses/upload-course-image', {
                 method: 'POST',
                 body: formData
             })
-    
+
             const data = await response.json()
             if (data.url) {
                 setFields(prev => ({ ...prev, course_img: data.url }))
@@ -135,9 +132,9 @@ const EditCourseForm = () => {
             setUploading(false)
         }
     }
-    
 
     if (loading) return <Loading />
+
 
     return (
         <form onSubmit={handleSubmit} className="w-full flex flex-col gap-y-5 font-Dana">

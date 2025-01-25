@@ -33,7 +33,7 @@ const Notifications = () => {
         };
 
         loadGuidances();
-        const interval = setInterval(loadGuidances, 30000); 
+        const interval = setInterval(loadGuidances, 6000000); 
         return () => clearInterval(interval);
     }, []);
 
@@ -80,20 +80,14 @@ const Notifications = () => {
         <div className="relative font-Dana" ref={notificationRef}>
             <button 
                 type="button" 
-                className="relative inline-flex items-center p-2 sm:p-3 text-sm font-medium text-center text-mango rounded-lg hover:bg-mango/10 focus:ring-2 focus:ring-mango/20 transition-all duration-300 z-50"
+                className="relative inline-flex items-center p-2 sm:p-3 text-sm font-medium text-center text-gray-900 dark:text-gray-50 rounded-lg hover:bg-mango/10 focus:ring-2 focus:ring-mango/20 transition-all duration-300 z-50"
                 onClick={() => setIsOpen(!isOpen)}
             >
-                <svg 
-                    className="w-4 h-4 sm:w-5 sm:h-5" 
-                    aria-hidden="true" 
-                    fill="currentColor" 
-                    viewBox="0 0 20 16"
-                >
-                    <path d="m10.036 8.278 9.258-7.79A1.979 1.979 0 0 0 18 0H2A1.987 1.987 0 0 0 .641.541l9.395 7.737Z"/>
-                    <path d="M11.241 9.817c-.36.275-.801.425-1.255.427-.428 0-.845-.138-1.187-.395L0 2.6V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2.5l-8.759 7.317Z"/>
+                <svg fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="size-6">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0" />
                 </svg>
                 {unreadGuides.length > 0 && (
-                    <div className="absolute inline-flex items-center justify-center w-5 h-5 sm:w-6 sm:h-6 text-xs font-DanaMedium text-gray-900 bg-red-500 border-2 border-white rounded-full -top-2 -end-2">
+                    <div className="absolute inline-flex items-center justify-center w-4 h-4 md:w-6 md:h-6 text-xs font-DanaMedium text-gray-900 bg-red-500 border-2 border-white rounded-full -top-2 -end-2">
                         {unreadGuides.length}
                     </div>
                 )}

@@ -27,7 +27,7 @@ const Theme = () => {
 
   return (
     <div 
-      className="inline-block font-DanaMedium text-gray-700 dark:text-mango-100"
+      className="inline-block font-DanaMedium text-gray-900 dark:text-gray-50"
       onClick={toggleTheme}
     >
       <div className="flex items-center gap-x-2 cursor-pointer dark:hidden">

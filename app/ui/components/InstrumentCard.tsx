@@ -38,8 +38,8 @@ interface Instrument {
         )}
       </div>
   
-      <div className="mt-auto text-center">
-        <p className="text-sm font-DanaMedium text-mango dark:text-mango-400 line-clamp-1">
+      <div className="mt-3 text-center">
+        <p className="text-sm font-DanaMedium text-mango-400 line-clamp-1">
           {instrument.instrument_teachers?.join(' _ ')}
         </p>
       </div>

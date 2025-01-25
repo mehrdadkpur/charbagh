@@ -56,10 +56,10 @@ export default function Profile() {
 
   if (!isLoggedIn) {
     return (
-      <div className='flex'>
+      <div className='flex gap-x-5 lg:gap-x-6 xl:gap-x-8 font-DanaMedium text-sm lg:text-lg xl:text-xl text-gray-900 dark:text-gray-50'>
         <Link 
           href="/login" 
-          className="flex justify-center items-center px-4 text-lg font-medium font-DanaMedium text-gray-900 Dark:text-white dark:text-gray-200 hover:text-mango dark:hover:text-mango transition-colors duration-200 z-50"
+          className="flex justify-center items-center px-4 text-lg font-medium font-DanaMedium text-gray-900 Dark:text-white dark:text-gray-50 hover:text-mango dark:hover:text-mango transition-colors duration-200 z-50"
         >
           <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15M12 9l-3 3m0 0l3 3m-3-3h12.75" />

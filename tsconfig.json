@@ -41,8 +41,8 @@
     "app/musicAcademy/courses/[course]/page.jsx",
     "app/musicAcademy/courses/page.jsx",
     "app/musicAcademy/songs/[categoryId]/page.jsx",
-    "app/dashboard/page.jsx"
-, "app/blogs/page.jsx", "app/api/auth/[...nextauth]/options.js", "app/login/page.tsx", "lib/password.js", "app/ui/components/ProfileNav.tsx", "lib/jwt.ts", "app/ui/components/Search.jsx", "app/dashboard/songs/[id]/add-book/AddBookForm.jsx", "app/api/songs/[id]/books/route.ts", "app/dashboard/songs/[id]/add-book/page.jsx", "app/gallery/page.jsx", "app/api/gallery/photos/route.js", "app/dashboard/gallery/videos/AddVideoForm.jsx", "app/api/instruments/route.js", "app/dashboard/blogs/AddBlogForm.jsx", "app/user/profile/page.tsx", "app/songs/[id]/page.jsx"  ],
+    "app/dashboard/page.tsx"
+, "app/blogs/page.tsx", "app/api/auth/[...nextauth]/options.js", "app/login/page.tsx", "lib/password.ts", "app/ui/components/ProfileNav.tsx", "lib/jwt.ts", "app/ui/components/Search.tsx", "app/dashboard/songs/[id]/add-book/AddBookForm.tsx", "app/api/songs/[id]/books/route.ts", "app/dashboard/songs/[id]/add-book/page.tsx", "app/gallery/page.jsx", "app/api/gallery/photos/route.ts", "app/dashboard/gallery/videos/AddVideoForm.tsx", "app/api/instruments/route.ts", "app/dashboard/blogs/AddBlogForm.tsx", "app/user/profile/page.tsx", "app/songs/[id]/page.jsx", "app/api/teachers/route.js", "app/dashboard/students/[id]/edit/EditStudentForm.jsx"  ],
   "exclude": [
     "node_modules"
   ]

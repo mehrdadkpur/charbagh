@@ -1,23 +1,20 @@
-
-import Link from "next/link"
-import Image from "next/image"
-import { fetchCourses } from "@/lib/requests"
-import CourseCard from '@/app/ui/components/CourseCard'
-
+import Link from "next/link";
+import Image from "next/image";
+import { fetchCourses } from "@/lib/requests";
+import CourseCard from '@/app/ui/components/CourseCard';
 
 const Courses = async () => {
     const { courses } = await fetchCourses();
 
-
     return ( 
-        <section className="w-full flex justify-between flex-col bg-[#F6F4EE] dark:bg-gray-900">
+        <section className="w-full flex justify-between flex-col bg-[#F6F4EE] dark:bg-gray-900 pt-3">
             <div className="container">
                 <div className="w-full flex justify-center items-center flex-col">
                     <div className="w-[350px] md:w-[503px] text-center">
-                        <h2 className="md:text-lg font-DanaMedium text-elf">پیشنهاد های ما به شما</h2>
-                        <h3 className="text-3xl md:text-5xl font-MorabbaBold text-greenDark dark:text-gray-50 leading-[40px] md:leading-[80px] dark:texgr">
+                        <h4 className="text-xs md:text-lg font-DanaMedium text-elf">پیشنهاد های ما به شما</h4>
+                        <h2 className="text-3xl md:text-5xl font-MorabbaBold text-gray-900 dark:text-gray-50 leading-[40px] md:leading-[80px]">
                             مهـارت موسیقـی خودتـان را ارتقـا دهیـد
-                        </h3>
+                        </h2>
                     </div>
 
                     <div className="flex justify-center items-center mb-14 mt-5">
@@ -30,7 +27,7 @@ const Courses = async () => {
 
                     <Link 
                         href="/courses" 
-                        className="w-56 h-16 flex justify-center items-center mx-auto font-DanaMedium bg-[#152422] text-2xl text-[#f6f4ee] rounded-full hover:bg-[#F6BE56] hover:text-[#152422] hover:scale-105 ease-in-out transition-all duration-700"
+                        className="font-DanaMedium bg-mango dark:bg-elf md:text-2xl text-gray-900 dark:text-gray-50 text-sm p-3 mb-4 rounded-full hover:bg-elf dark:hover:bg-mango hover:scale-105 ease-in-out transition-all duration-700"
                     >
                         مشاهده همه دوره ها
                     </Link>

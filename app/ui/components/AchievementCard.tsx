@@ -1,6 +1,13 @@
 import CountUp from "react-countup"
 
-const AchievementCard = ({ number, title, description, icon }:{number:number , title:string , description:string , icon:string}) => (
+interface AchievementCardProps {
+  number: number
+  title: string
+  description: string
+  icon: React.ReactNode
+}
+
+const AchievementCard = ({ number, title, description, icon }:AchievementCardProps) => (
     <div className="relative flex flex-col items-center text-center p-6">
       <div className="lg:h-[100px] text-5xl md:text-6xl lg:text-8xl font-DanaDemiBold text-mango dark:text-mango-400">
         <CountUp end={number} duration={4} />

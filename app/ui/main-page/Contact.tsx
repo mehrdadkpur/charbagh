@@ -74,8 +74,8 @@ const Contact = () => {
               priority
             />
 
-      <div className="container mx-auto px-4 py-20">
-        <div className="flex flex-col items-center gap-16 relative z-10">
+      <div className="container mx-auto px-4">
+        <div className="flex flex-col items-center gap-16 relative z-10 ">
           {/* Header */}
           <div className="max-w-2xl text-center">
             <span className="text-amber-400 font-Dana text-sm">
@@ -117,26 +117,20 @@ const Contact = () => {
             
             <button
               type="submit"
-              className="px-8 py-4 bg-gray-900 dark:bg-gray-100 text-white dark:text-gray-900 
-              rounded-full text-2xl font-DanaMedium 
-              transition-all duration-300 
-              hover:bg-amber-400 hover:text-gray-900 hover:scale-105"
-            >
+              className="font-DanaMedium bg-mango dark:bg-elf md:text-2xl text-gray-900 dark:text-gray-50 text-sm p-3 mb-4 rounded-full hover:bg-elf dark:hover:bg-mango hover:scale-105 ease-in-out transition-all duration-700">
               ارسال
             </button>
           </form>
         </div>
 
         {/* Decorative Image */}
-        <div className="absolute top-10 right-20 lg:top-5 lg:right-[400px] w-1/4 
-        transform rotate-12 transition-transform duration-[3000ms] 
-        group-hover:translate-x-4 group-hover:-translate-y-4">
+        <div className="absolute top-10 right-20 lg:top-5 lg:right-[400px] w-1/4 transform rotate-12 transition-transform duration-[3000ms] group-hover:translate-x-4 group-hover:-translate-y-4">
           <Image
             src="/images/Music-2.png"
             alt="decorative music"
-            width={390}
-            height={536}
-            className="w-full"
+            width={300}
+            height={300}
+            className="opacity-10"
           />
         </div>
       </div>

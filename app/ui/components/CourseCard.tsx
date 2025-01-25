@@ -12,12 +12,15 @@ interface CourseProps {
 }
 
 const CourseCard = ({ course }: CourseProps) => {
+  const truncateText = (text: string, maxLength: number) => {
+    return text.length > maxLength ? `${text.substring(0, maxLength)}...` : text;
+  };
+
   return (
     <Link 
       href={`/courses/${course._id}`} 
       className="group relative flex flex-col w-full sm:w-[350px] lg:w-[400px] p-5 bg-white dark:bg-gray-800 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300"
     >
-      {/* Image Container */}
       <div className="relative aspect-video w-full overflow-hidden rounded-xl">
         <Image
           src={course.course_img}
@@ -29,22 +32,20 @@ const CourseCard = ({ course }: CourseProps) => {
         />
       </div>
 
-      {/* Content */}
       <div className="flex flex-col items-center mt-6 space-y-3">
-        <h4 className="text-lg sm:text-xl font-DanaDemiBold text-gray-800 dark:text-gray-100">
-          دوره آموزشی {course.course_name}
+        <h4 className="text-lg sm:text-xl font-DanaDemiBold text-gray-800 dark:text-gray-100 overflow-hidden text-ellipsis whitespace-nowrap w-full text-center">
+          دوره آموزشی {truncateText(course.course_name, 30)}
         </h4>
         
         <h5 className="text-sm font-DanaMedium text-mango dark:text-mango-400">
-          استاد {course.course_teachers}
+          مدرس: {truncateText(course.course_teachers, 20)}
         </h5>
 
-        <p className="h-16 text-sm font-DanaMedium text-gray-600 dark:text-gray-300 text-center line-clamp-2">
-          {course.course_description}
+        <p className="h-16 text-sm font-DanaMedium text-gray-600 dark:text-gray-300 text-center overflow-hidden">
+          {truncateText(course.course_description, 100)}
         </p>
       </div>
 
-      {/* Animated Icon */}
       <div className="absolute -bottom-8 left-1/2 -translate-x-1/2">
         <div className="relative size-16 bg-gray-100 dark:bg-gray-700 rounded-full flex items-center justify-center transform transition-all duration-500 group-hover:rotate-180">
           <div className="size-12 bg-white dark:bg-gray-800 rounded-full flex items-center justify-center">

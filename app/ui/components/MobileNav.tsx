@@ -128,7 +128,7 @@ const MobileNav = () => {
                 <Image width={48} height={48} src="/images/logo.png" alt="" />
             </div>
             <div>
-            <ProfileNav/>
+                <ProfileNav/>
             </div>
         </div>
      );

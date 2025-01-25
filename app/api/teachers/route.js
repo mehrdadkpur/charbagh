@@ -58,7 +58,6 @@ export const POST = async (request) => {
     }
 }
 
-
 export async function GET (){
     await connectToMongodb();
     const teachers = await Teacher.find();

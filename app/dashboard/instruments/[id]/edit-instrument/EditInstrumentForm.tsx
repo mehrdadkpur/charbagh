@@ -1,4 +1,5 @@
 'use client'
+
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
 import { useParams, useRouter } from 'next/navigation'
@@ -34,9 +35,8 @@ const EditInstrumentForm = () => {
         instrument_description: "",
         instrument_origin: "",
     })
-    const [uploading, setUploading] = useState(false);
-    const [imagePreview, setImagePreview] = useState(fields.instrument_img);
-
+    const [uploading, setUploading] = useState(false)
+    const [imagePreview, setImagePreview] = useState<string>("")
     const [loading, setLoading] = useState(true)
 
     useEffect(() => {
@@ -50,7 +50,9 @@ const EditInstrumentForm = () => {
                 const instrumentData = await instrumentResponse.json()
                 setFields(instrumentData)
                 setTeachers(teachersData)
+                setImagePreview(instrumentData.instrument_img || '')
             } catch (error) {
+                toast.error('خطا در دریافت اطلاعات')
             } finally {
                 setLoading(false)
             }
@@ -58,10 +60,6 @@ const EditInstrumentForm = () => {
 
         if (id) fetchData()
     }, [id])
-
-    useEffect(() => { 
-        setImagePreview(fields.instrument_img); 
-    }, [fields.instrument_img]);
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { name, value } = e.target
@@ -84,7 +82,6 @@ const EditInstrumentForm = () => {
             }
         } catch (error) {
             toast.error('ویرایش ناموفق')
-            console.error('Error updating Instrument:', error)
         }
     }
 
@@ -98,45 +95,44 @@ const EditInstrumentForm = () => {
         }))
     }
 
-      const handleImageUpdate = async (e: React.ChangeEvent<HTMLInputElement>) => {
-      const file = e.target.files?.[0];
-      if (!file) return;
+    const handleImageUpdate = async (e: React.ChangeEvent<HTMLInputElement>) => {
+        const file = e.target.files?.[0]
+        if (!file) return
 
-      // Preview image
-      const reader = new FileReader();
-      reader.onloadend = () => {
-        const result = reader.result as string;
-          setImagePreview(result);
-      };
-      reader.readAsDataURL(file);
+        const reader = new FileReader()
+        reader.onloadend = () => {
+            setImagePreview(reader.result as string)
+        }
+        reader.readAsDataURL(file)
 
-      setUploading(true);
-      const formData = new FormData();
-      formData.append("file", file);
-      formData.append("instrumentName", fields.instrument_name);
-      
-      if (fields.instrument_img) formData.append('instument_img', fields.instrument_img);
+        setUploading(true)
+        const formData = new FormData()
+        formData.append("file", file)
+        formData.append("instrumentName", fields.instrument_name)
+        
+        if (fields.instrument_img) {
+            formData.append('instrument_img', fields.instrument_img)
+        }
 
-      try {
-          const response = await fetch("/api/instruments/upload-instrument-image", {
-              method: "POST",
-              body: formData,
-          });
+        try {
+            const response = await fetch("/api/instruments/upload-instrument-image", {
+                method: "POST",
+                body: formData,
+            })
 
-          const data = await response.json();
-          if (data.url) {
-            toast.success('آپلود ناموفق')
-              setFields(prev => ({ ...prev, url: data.url }));
-          }
-      } catch (error) {
-          toast.error('آپلود ناموفق');
-      } finally {
-          setUploading(false);
-      }
-  };
+            const data = await response.json()
+            if (data.url) {
+                setFields(prev => ({ ...prev, instrument_img: data.url }))
+                toast.success('آپلود موفقیت آمیز')
+            }
+        } catch (error) {
+            toast.error('آپلود ناموفق')
+        } finally {
+            setUploading(false)
+        }
+    }
 
     if (loading) return <Loading />
-
 
     return (
         <form onSubmit={handleSubmit} className="w-full flex justify-center items-start flex-col gap-y-5">

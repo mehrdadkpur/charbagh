@@ -16,14 +16,14 @@ const Blogs = async () => {
 
   return (
     <section className="bg-[#F6F4EE] dark:bg-[#25403c]">
-      <div className="container mx-auto px-4 py-20">
+      <div className="container mx-auto px-4">
         <div className="flex flex-col items-center gap-16">
           {/* Header */}
-          <div className="max-w-[400px] md:max-w-[603px] text-center">
-            <span className="text-sm font-DanaMedium text-mango dark:text-mango-400">
+          <div className="text-center">
+            <h4 className="ext-xs md:text-lg font-DanaMedium text-elf">
               خبرنامه
-            </span>
-            <h2 className="mt-3 text-3xl md:text-4xl lg:text-5xl font-MorabbaBold text-gray-800 dark:text-gray-100 leading-tight">
+            </h4>
+            <h2 className="text-3xl md:text-5xl font-MorabbaBold text-gray-900 dark:text-gray-50 leading-[60px] md:leading-[80px]">
               خبرنامه آموزشگاه موسیقی ما و رویدادهای مهم
             </h2>
           </div>
@@ -45,12 +45,7 @@ const Blogs = async () => {
           {/* CTA Button */}
           <Link
             href="/blogs"
-            className="inline-flex items-center justify-center px-8 py-4 
-            text-2xl font-DanaMedium text-white dark:text-gray-900 
-            bg-gray-900 dark:bg-gray-100 rounded-full 
-            transition-all duration-300 
-            hover:bg-amber-400 dark:hover:bg-amber-400 
-            hover:text-gray-900 hover:scale-105"
+            className="font-DanaMedium bg-mango dark:bg-elf md:text-2xl text-gray-900 dark:text-gray-50 text-sm p-3 mb-4 rounded-3xl hover:bg-elf dark:hover:bg-mango hover:scale-105 ease-in-out transition-all duration-700"
           >
             بیشتر
           </Link>
