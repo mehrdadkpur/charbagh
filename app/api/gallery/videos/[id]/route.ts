@@ -8,7 +8,7 @@ interface RouteParams {
   };
 }
 
-export async function GET(request: NextRequest, { params }: RouteParams) {
+export async function GET( request: NextRequest, { params }: { params: { id: string } }) {
   const { id } = params
 
   try {
@@ -24,7 +24,6 @@ export async function GET(request: NextRequest, { params }: RouteParams) {
     return NextResponse.json({ message: 'Failed to fetch Video' }, { status: 500 })
   }
 }
-
 
 export async function PUT(request:NextRequest, { params }:RouteParams) {
     const { id } = params;
