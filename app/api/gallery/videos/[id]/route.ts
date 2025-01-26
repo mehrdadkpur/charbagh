@@ -9,22 +9,21 @@ interface RouteSegment {
 }
 
 export async function GET(request: NextRequest, { params }: RouteSegment): Promise<NextResponse> {
-  const { id } = await params;
+  const { id } = await params
 
   try {
-    await connectToMongodb();
-    const video = await Video.findById(id);
-
+    await connectToMongodb()
+    const video = await Video.findById(id)
+    
     if (!video) {
-      return NextResponse.json({ message: 'video not found' }, { status: 404 });
+      return NextResponse.json({ message: 'Video not found' }, { status: 404 })
     }
 
-    return NextResponse.json(video);
+    return NextResponse.json(video)
   } catch (error) {
-    return NextResponse.json({ message: 'Failed to fetch video' }, { status: 500 });
+    return NextResponse.json({ message: 'Failed to fetch Video' }, { status: 500 })
   }
 }
-
 
 export async function PUT(request: NextRequest, { params }: RouteSegment): Promise<NextResponse> {
   const { id } = await params;
