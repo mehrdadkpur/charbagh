@@ -8,8 +8,14 @@ interface RouteParams {
   };
 }
 
-export async function GET( request: NextRequest, { params }: { params: { id: string } }) {
-  const { id } = params
+type Props = {
+  params: {
+    id: string
+  }
+}
+
+export async function GET(_request: NextRequest, context: Props) {
+  const { id } = context.params
 
   try {
     await connectToMongodb()
@@ -24,6 +30,7 @@ export async function GET( request: NextRequest, { params }: { params: { id: str
     return NextResponse.json({ message: 'Failed to fetch Video' }, { status: 500 })
   }
 }
+
 
 export async function PUT(request:NextRequest, { params }:RouteParams) {
     const { id } = params;
