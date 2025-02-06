@@ -90,7 +90,7 @@ const AddBlogForm = () => {
                 <label className="w-1/3" htmlFor="blog_author"> نویسنده: </label>
                 <input
                     name="blog_author"
-                    className="w-full h-12 border p-3"
+                    className="w-full h-12 border p-3 bg-gray-50 dark:bg-gray-700"
                     placeholder="نویسنده "
                     required
                     value={fields.blog_author}
@@ -101,7 +101,7 @@ const AddBlogForm = () => {
                 <label className="w-1/3" htmlFor="blog_title"> موضوع: </label>
                 <input
                         name="blog_title"
-                        className="w-full h-12 border p-3"
+                        className="w-full h-12 border p-3 bg-gray-50 dark:bg-gray-700"
                         placeholder="موضوع "
                         required
                         value={fields.blog_title}
@@ -112,7 +112,7 @@ const AddBlogForm = () => {
                 <label className="w-1/3" htmlFor="blog_text"> متن پست: </label>
                 <textarea
                         name="blog_text"
-                        className="w-full h-60 border p-3"
+                        className="w-full h-60 border p-3 bg-gray-50 dark:bg-gray-700"
                         placeholder="متن پست "
                         required
                         value={fields.blog_text}
@@ -123,13 +123,13 @@ const AddBlogForm = () => {
             <div className="w-full flex justify-center items-center flex-col gap-y-3">
                 <button 
                     type="submit" 
-                    className="w-full p-3 bg-green-600 rounded-lg text-center text-white hover:bg-green-700 transition-colors"
+                    className="w-full p-3 bg-green-600 rounded-lg text-center text-gray-50 hover:bg-green-700 transition-colors"
                 >
                     ساخت پست
                 </button>
                 <Link 
                     href="/dashboard/blogs" 
-                    className="w-full p-3 bg-red-600 rounded-lg text-center text-white hover:bg-red-700 transition-colors"
+                    className="w-full p-3 bg-red-600 rounded-lg text-center text-gray-50 hover:bg-red-700 transition-colors"
                 >
                     انصراف
                 </Link>

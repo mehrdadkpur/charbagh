@@ -90,8 +90,8 @@ const Students = () => {
   }
 
     return ( 
-        <section className="w-full flex justify-center pr-[340px] pl-10 mt-3">
-            <div className="w-full p-5 flex justify-center bg-white rounded-xl">
+        <section className="w-full flex justify-center pr-[340px] pl-10 mt-3 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-50">
+            <div className="w-full p-5 flex justify-center rounded-xl">
                 <div className="w-full mt-5 ">                   
                     <span className="w-full flex justify-center items-center font-MorabbaMedium text-3xl mb-4">هنرجویان آموزشگاه</span>
                     <div className="relative w-full overflow-x-auto shadow-md sm:rounded-lg">
@@ -101,10 +101,11 @@ const Students = () => {
                            <AddButton route={'/dashboard/students/add-student'}/>  
                         </div>
                                                                         {/* Delete Modal */}
-                        <DeleteModal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} onDelete={handleDeleteStudent}/>
+                        <DeleteModal onDelete={handleDeleteStudent} isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+
                                                                          {/* table */}   
-                        <table className="w-full text-sm text-left font-DanaMedium rtl:text-right text-gray-500 dark:text-gray-400">
-                            <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                        <table className="w-full text-sm text-left font-DanaMedium rtl:text-right">
+                            <thead className="">
                                 <tr>
                                 <th scope="col" className="px-6 py-3">نام و نام خانوادگی</th>
                                 <th scope="col" className="px-6 py-3">حوزه هنری</th>
@@ -116,7 +117,7 @@ const Students = () => {
                             </thead>
                             <tbody>
                                 {filteredStudents?.map((student) => (
-                                <tr key={student._id} className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                <tr key={student._id} className=" border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600">
                                     <td className="px-6 py-4">
                                     <div className="flex items-center">
                                         <div className="w-10 h-10 flex-shrink-0">

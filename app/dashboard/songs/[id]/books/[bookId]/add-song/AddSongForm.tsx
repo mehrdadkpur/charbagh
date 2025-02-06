@@ -94,7 +94,7 @@ const AddSongForm = ({ id }:AddSongProps) => {
         <input
           name="song_title"
           type="text"
-          className="w-full h-12 border p-3"
+          className="w-full h-12 border p-3 bg-gray-50 dark:bg-gray-700"
           placeholder="نام موسیقی"
           required
           value={fields.song_title}
@@ -106,7 +106,7 @@ const AddSongForm = ({ id }:AddSongProps) => {
         <input
           name="song_artist"
           type="text"
-          className="w-full h-12 border p-3"
+          className="w-full h-12 border p-3 bg-gray-50 dark:bg-gray-700"
           placeholder="نوازنده"
           required
           value={fields.song_artist}
@@ -119,7 +119,7 @@ const AddSongForm = ({ id }:AddSongProps) => {
           type="file"
           accept="audio/mp3"
           onChange={handleSongUpload}
-          className="block w-full text-sm text-slate-500
+          className="block w-full text-sm
             file:mr-4 file:py-2 file:px-4
             file:rounded-full file:border-0
             file:text-sm file:font-semibold

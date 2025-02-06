@@ -76,7 +76,7 @@ const Blogs = () => {
 
     return ( 
         <section className="w-full flex justify-center pr-[340px] pl-10 mt-3">
-            <div className="w-full p-5 flex justify-center bg-white rounded-xl">
+            <div className="w-full p-5 flex justify-center rounded-xl">
                 <div className="w-full mt-5 ">                   
                     <span className="w-full flex justify-center items-center font-MorabbaMedium text-3xl mb-4">خبرنامه های آموزشگاه</span>
                     <div className="relative w-full overflow-x-auto shadow-md sm:rounded-lg">
@@ -86,21 +86,23 @@ const Blogs = () => {
                                 <AddButton route={'/dashboard/blogs/add-blog'}/>  
                             </div>
                                                                         {/* Delete Modal */}
-                        <DeleteModal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} onDelete={handleDeleteBlog}/>
+                        <DeleteModal onDelete={handleDeleteBlog} isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+
                                                                          {/* table */}   
-                        <table className="w-full text-sm text-left font-DanaMedium rtl:text-right text-gray-500 dark:text-gray-400">
-                            <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                        <table className="w-full text-sm font-DanaMedium">
+                            <thead className="text-xs">
                                 <tr>
                                     <th scope="col" className="px-6 py-3">موضوع پست</th>
                                     <th scope="col" className="px-6 py-3">نویسنده</th>
                                     <th scope="col" className="px-6 py-3">تاریخ</th>
+                                    <th scope="col" className="px-6 py-3">عملیات</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 {filteredBlogs.map((blog) => {
                                     const shamsiCreatedDate = jalaali.toJalaali(new Date(blog.createdAt));
                                 return(       
-                                <tr key={blog._id} className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                <tr key={blog._id} className="border-b dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                                     <td className="px-6 py-4">
                                     <div className="flex items-center">
                                         <div className="w-10 h-10 flex-shrink-0">

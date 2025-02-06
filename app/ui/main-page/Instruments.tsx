@@ -2,6 +2,13 @@ import Link from "next/link";
 import {fetchInstruments} from "../../../lib/requests"
 import InstrumentCard from "@/app/ui/components/InstrumentCard";
 
+interface Instrument {
+  _id: string
+  instrument_name: string
+  instrument_img: string
+  instrument_teachers: string[]
+}
+
 const Instruments = async () => {
     const{instruments}= await fetchInstruments(); 
     return (
@@ -18,8 +25,8 @@ const Instruments = async () => {
                             <Link href='/instruments' className="font-DanaMedium bg-mango dark:bg-elf md:text-2xl text-gray-900 dark:text-gray-50 text-sm p-3 mb-4 rounded-full hover:bg-elf dark:hover:bg-mango hover:scale-105 ease-in-out transition-all duration-700">بزن بریم</Link>
                         </div>
                         <div className="left lg:w-2/3 h-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 md:gap-x-8 gap-y-5 md:gap-y-3">
-                            {instruments?.map((instrument) => (
-                                <InstrumentCard instrument={instrument} key={instrument.id}/>
+                            {instruments?.map((instrument:Instrument) => (
+                                <InstrumentCard instrument={instrument} key={instrument._id}/>
                             ))}
                         </div>
                     </div>         

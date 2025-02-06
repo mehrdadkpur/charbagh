@@ -116,28 +116,18 @@ const Guidances = () => {
 
     return (
         <section className="w-full flex justify-center pr-[340px] pl-10 mt-3">
-            <div className="w-full p-5 flex justify-center bg-white rounded-xl">
+            <div className="w-full p-5 flex justify-center rounded-xl">
                 <div className="w-full mt-5">
                     <h1 className="w-full flex justify-center items-center font-MorabbaMedium text-3xl mb-4">
                         درخواست های پشتیبانی
                     </h1>
                     <div className="relative w-full overflow-x-auto shadow-md sm:rounded-lg">
                         <div className="w-full flex justify-center items-center gap-x-5 mb-5">
-                            <Search 
-                                query={query} 
-                                handleSearch={handleSearch} 
-                                baseSearch="نام خانوادگی" 
-                            />
+                            <Search query={query} handleSearch={handleSearch} baseSearch="نام خانوادگی" />
                         </div>
-                        
-                        <DeleteModal 
-                            isModalOpen={isModalOpen} 
-                            setIsModalOpen={setIsModalOpen} 
-                            onDelete={handleDeleteGuidance} 
-                        />
-
-                        <table className="w-full text-sm text-left font-DanaMedium rtl:text-right text-gray-500 dark:text-gray-400">
-                            <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                        <DeleteModal onDelete={handleDeleteGuidance} isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+                        <table className="w-full text-sm">
+                            <thead className="text-xs">
                                 <tr>
                                     <th scope="col" className="px-6 py-3">نام و نام خانوادگی</th>
                                     <th scope="col" className="px-6 py-3">موبایل</th>
@@ -149,7 +139,7 @@ const Guidances = () => {
                             </thead>
                             <tbody>
                                 {filteredGuidances.map((guidance) => (
-                                    <tr key={guidance._id} className={`${guidance.status === "مشاوره شد" ? "bg-gray-100 opacity-70" : "bg-white"} border-b hover:bg-gray-50`}>
+                                    <tr key={guidance._id} className={`${guidance.status === "مشاوره شد" ? "bg-gray-100 dark:bg-gray-700 opacity-70" : "bg-gray-50 dark:bg-gray-500"} border-b hover:bg-gray-50`}>
                                         <td className="px-6 py-4">{guidance.fullname}</td>
                                         <td className="px-6 py-4">{guidance.mobile}</td>
                                         <td className="px-6 py-4">{formatJalaaliDate(guidance.createdAt)}</td>

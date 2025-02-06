@@ -120,7 +120,7 @@ const EditBlogForm = () => {
                 <label className="w-1/3" htmlFor="blog_author"> نویسنده: </label>
                 <input
                     name="blog_author"
-                    className="w-full h-12 border p-3"
+                    className="w-full h-12 border p-3 bg-gray-50 dark:bg-gray-700"
                     placeholder="نویسنده "
                     required
                     value={fields.blog_author}
@@ -131,7 +131,7 @@ const EditBlogForm = () => {
                 <label className="w-1/3" htmlFor="blog_title"> موضوع: </label>
                 <input
                         name="blog_title"
-                        className="w-full h-12 border p-3"
+                        className="w-full h-12 border p-3 bg-gray-50 dark:bg-gray-700"
                         placeholder="موضوع "
                         required
                         value={fields.blog_title}
@@ -142,7 +142,7 @@ const EditBlogForm = () => {
                 <label className="w-1/3" htmlFor="blog_text"> متن پست: </label>
                 <textarea
                         name="blog_text"
-                        className="w-full h-60 border p-3"
+                        className="w-full h-60 border p-3 bg-gray-50 dark:bg-gray-700"
                         placeholder="متن پست "
                         required
                         value={fields.blog_text}

@@ -2,6 +2,11 @@ import Link from "next/link";
 import RoutesHeader from "../ui/components/RoutesHeader";
 import Image from "next/image";
 
+export const metadata = {
+  title: 'آموزشگاه چهارباغ |گالری',
+  description: 'این صفحه خبرنامه و رویدادهای مهم آموزشگاه موسیقی چهارباغ است.',
+};
+
 export default function GalleryPage() {
   return (
     <section>

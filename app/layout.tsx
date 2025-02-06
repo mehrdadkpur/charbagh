@@ -7,7 +7,7 @@ import { Toaster } from 'react-hot-toast';
 import MobileNav from './ui/components/MobileNav';
 
 export const metadata: Metadata = {
-  title: 'آموزشگاه موسیقی چهارباغ',
+  title: 'آموزشگاه موسیقی چهارباغ | خانه',
   description: 'موسیقی هنر برتر',
 };
 
@@ -18,7 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="fa-IR" dir="rtl">
-      <body className='min-h-screen flex flex-col'>
+      <body className='min-h-screen flex flex-col font-Dana'>
         <MobileNav/>
       <Toaster position="top-center" reverseOrder={false} toastOptions={{duration:5000 , style:{fontFamily:'Dana'}}} />
         <main className="flex-grow">

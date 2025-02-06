@@ -56,7 +56,7 @@ export default function Profile() {
 
   if (!isLoggedIn) {
     return (
-      <div className='flex gap-x-5 lg:gap-x-6 xl:gap-x-8 font-DanaMedium text-sm lg:text-lg xl:text-xl text-gray-900 dark:text-gray-50'>
+      <div className='flex gap-x-5 lg:gap-x-6 xl:gap-x-8 font-DanaMedium text-sm lg:text-lg xl:text-xl text-gray-900 dark:text-gray-50 rounded-xl shadow-xl'>
         <Link 
           href="/login" 
           className="flex justify-center items-center px-4 text-lg font-medium font-DanaMedium text-gray-900 Dark:text-white dark:text-gray-50 hover:text-mango dark:hover:text-mango transition-colors duration-200 z-50"
@@ -84,7 +84,7 @@ export default function Profile() {
   )
 
   return (
-    <div className="flex items-center gap-4 font-Dana z-50">
+    <div className="flex items-center gap-4 px-7 font-Dana z-50 rounded-xl shadow-xl">
       <div className="relative" ref={menuRef}>
         <button
           onClick={() => setIsOpen(!isOpen)}

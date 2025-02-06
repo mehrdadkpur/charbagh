@@ -27,7 +27,7 @@ const Theme = () => {
 
   return (
     <div 
-      className="inline-block font-DanaMedium text-gray-900 dark:text-gray-50"
+      className="inline-block font-DanaMedium text-gray-900 dark:text-gray-50 z-50 hover:text-mango"
       onClick={toggleTheme}
     >
       <div className="flex items-center gap-x-2 cursor-pointer dark:hidden">
@@ -46,7 +46,7 @@ const Theme = () => {
         </svg>
       </div>
 
-      <div className="hidden items-center gap-x-2 cursor-pointer dark:flex">
+      <div className="hidden items-center gap-x-2 cursor-pointer dark:flex hover:text-mango">
         <svg 
           fill="none" 
           viewBox="0 0 24 24" 

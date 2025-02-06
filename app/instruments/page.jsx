@@ -3,6 +3,12 @@ import { fetchInstruments } from '@/lib/requests'
 import InstrumentCard from '../ui/components/InstrumentCard'
 import Image from 'next/image'
 
+export const metadata = {
+    title: 'آموزشگاه چهارباغ | معرفی سازها',
+    description: 'این صفحه گالری عکس آموزشگاه موسیقی چهارباغ است.',
+  };
+  
+
 const Instruments = async () => {
     const { instruments } = await fetchInstruments()
 

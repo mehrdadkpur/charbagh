@@ -13,7 +13,7 @@ const Navigation = () => {
             <Link href={'/'}>
                 <Image width={65} height={65} className="w-[65px] lg:w-[75px] xl:w-[92px]"  src="/images/logo.png" alt="logo" />
             </Link>
-            <div className="w-full flex justify-between items-center gap-x-4 p-2 ">
+            <div className="w-full  flex justify-between items-center gap-x-4 p-2 ">
                     <ul className="flex items-center gap-x-3 lg:gap-x-6 xl:gap-x-8 font-DanaMedium text-sm lg:text-lg xl:text-xl text-gray-900 dark:text-gray-50 ">
                         <Link href='/courses' className={`transition-colors duration-200 ${pathname.startsWith('/courses') ? 'text-mango' : 'hover:text-mango'}`}>
                             دوره ها 

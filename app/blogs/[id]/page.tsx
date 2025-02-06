@@ -6,6 +6,7 @@ import { fetchBlog } from "../../../lib/requests";
 import Loading from "@/app/loading";
 import RoutesHeader from "@/app/ui/components/RoutesHeader";
 import Image from "next/image";
+import ErrorHandling from "@/app/ui/components/ErrorHandling";
 
 interface IBlog{
     createdAt:Date
@@ -40,12 +41,18 @@ const Blog = () => {
             fetchBlogData();
         }
         },[id , blog]);
+
+        useEffect(() => {
+            if (blog) {
+                document.title = `${blog.blog_title} | ${blog.blog_author}`;
+            }
+        }, [blog]);
         
         if (loading) { 
             return <Loading/>; 
         } 
         if (!blog) { 
-            return <div>Blog not found</div>; 
+            return <ErrorHandling/> 
         }
         const shamsiCreatedDate = jalaali.toJalaali(new Date(blog.createdAt));
     return ( 

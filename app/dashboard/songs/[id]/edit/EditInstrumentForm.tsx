@@ -122,7 +122,7 @@ const EditInstrumentForm = () => {
                 <input
                     name="instrument_name"
                     type="text"
-                    className="w-full h-12 border p-3"
+                    className="w-full h-12 border p-3 bg-gray-50 dark:bg-gray-700"
                     placeholder="نام ساز"
                     required
                     value={fields.instrument_name}

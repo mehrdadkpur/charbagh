@@ -37,7 +37,7 @@ export default function ProfileImageUpload({ currentImage, onUpdate }: ProfileIm
 
   return (
     <div className="relative group font-DanaMedium">
-      <Image width={32} height={32} src={currentImage || '/images/default-profile.jpg'} alt="Profile" className="w-40 h-40 rounded-full object-cover"/>
+      <Image width={200} height={200} src={currentImage || '/images/default-profile.jpg'} alt="Profile" className="w-40 h-40 rounded-full object-cover"/>
       <label className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 rounded-full opacity-0 group-hover:opacity-100 cursor-pointer text-white">
         <input
           type="file"

@@ -90,7 +90,7 @@ const AddStudentForm = () => {
                     <input
                         name="firstname"
                         type="text"
-                        className="w-2/3 h-12 border p-3"
+                        className="w-2/3 h-12 border p-3 bg-gray-50 dark:bg-gray-700"
                         placeholder="نام"
                         required
                         value={fields.firstname}
@@ -102,7 +102,7 @@ const AddStudentForm = () => {
                     <input
                         name="lastname"
                         type="text"
-                        className="w-2/3 h-12 border p-3"
+                        className="w-2/3 h-12 border p-3 bg-gray-50 dark:bg-gray-700"
                         placeholder="نام خانوادگی"
                         required
                         value={fields.lastname}
@@ -110,7 +110,7 @@ const AddStudentForm = () => {
                     />
                 </div>
                 <div className="w-full flex justify-center items-center gap-x-2 ">
-                <label className="w-1/3 text-gray-700 ">تاریخ تولد:</label>
+                <label className="w-1/3">تاریخ تولد:</label>
                 <div className="w-2/3">
                   <ShamsiDatePicker onBirthDateChange={handleBirthDateChange} initialDate={fields.birthDate as Date} onRegistryDateChange={handleBirthDateChange}/>
                 </div>
@@ -119,7 +119,7 @@ const AddStudentForm = () => {
                 <label className="w-1/3" htmlFor="gender">جنسیت:</label>
                     <select
                         name="gender"
-                        className="w-2/3 h-12 border p-3"
+                        className="w-2/3 h-12 border p-3 bg-gray-50 dark:bg-gray-700"
                         required
                         value={fields.gender}
                         onChange={handleChange}
@@ -134,7 +134,7 @@ const AddStudentForm = () => {
                     <input
                         name="nationalityNumber"
                         type="string"
-                        className="w-2/3 h-12 border p-3"
+                        className="w-2/3 h-12 border p-3 bg-gray-50 dark:bg-gray-700"
                         placeholder=" شماره ملی"
                         required
                         value={fields.nationalityNumber}
@@ -146,7 +146,7 @@ const AddStudentForm = () => {
                     <input
                         name="mobile"
                         type="text"
-                        className="w-2/3 h-12 border p-3"
+                        className="w-2/3 h-12 border p-3 bg-gray-50 dark:bg-gray-700"
                         required
                         placeholder="شماره موبایل"
                         value={fields.mobile }
@@ -158,7 +158,7 @@ const AddStudentForm = () => {
                     <input
                         type="email"
                         name="email"
-                        className="w-2/3 h-12 border p-3"
+                        className="w-2/3 h-12 border p-3 bg-gray-50 dark:bg-gray-700"
                         required
                         placeholder="آدرس ایمیل"
                         value={fields.email}
@@ -170,7 +170,7 @@ const AddStudentForm = () => {
                     <input
                         type="text"
                         name="address"
-                        className="w-2/3 h-12 border p-3"
+                        className="w-2/3 h-12 border p-3 bg-gray-50 dark:bg-gray-700"
                         required
                         placeholder="آدرس منزل"
                         value={fields.address}
@@ -181,7 +181,7 @@ const AddStudentForm = () => {
                 <label className="w-1/3" htmlFor="course">رشته آموزشی:</label>
                     <select
                         name="course"
-                        className="w-2/3 h-12 border p-3"
+                        className="w-2/3 h-12 border p-3 bg-gray-50 dark:bg-gray-700"
                         required
                         value={fields.course || ""}
                         onChange={handleChange}
@@ -202,7 +202,7 @@ const AddStudentForm = () => {
                     <input
                         type="text"
                         name="password"
-                        className="w-2/3 h-12 border p-3"
+                        className="w-2/3 h-12 border p-3 bg-gray-50 dark:bg-gray-700"
                         required
                         placeholder="رمز عبور"
                         value={fields.password}
@@ -213,7 +213,7 @@ const AddStudentForm = () => {
                     <label className="w-1/3" htmlFor="status">وضعیت:</label>
                     <select
                         name="status"
-                        className="w-2/3 h-12 border p-3"
+                        className="w-2/3 h-12 border p-3 bg-gray-50 dark:bg-gray-700"
                         required
                         value={fields.status}
                         onChange={handleChange}

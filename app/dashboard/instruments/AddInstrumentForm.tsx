@@ -126,7 +126,7 @@ const AddInstrumentForm = () => {
                 <input
                     name="instrument_name"
                     type="text"
-                    className="w-full h-12 border p-3"
+                    className="w-full h-12 border p-3 bg-gray-50 dark:bg-gray-700"
                     placeholder="نام ساز"
                     required
                     value={fields.instrument_name}
@@ -137,7 +137,7 @@ const AddInstrumentForm = () => {
                 <label className="w-1/3" htmlFor="instrument_type">نوع ساز:</label>
                 <input
                     name="instrument_type"
-                    className="w-full h-12 border p-3"
+                    className="w-full h-12 border p-3 bg-gray-50 dark:bg-gray-700"
                     placeholder="نوع ساز"
                     required
                     value={fields.instrument_type}
@@ -148,7 +148,7 @@ const AddInstrumentForm = () => {
                 <label className="w-1/3" htmlFor="instrument_origin">مبدا ساز:</label>
                 <input
                     name="instrument_origin"
-                    className="w-full h-12 border p-3"
+                    className="w-full h-12 border p-3 bg-gray-50 dark:bg-gray-700"
                     placeholder="مبدا ساز"
                     required
                     value={fields.instrument_origin}
@@ -161,7 +161,7 @@ const AddInstrumentForm = () => {
                     name="instrument_description"
                     rows={10}
                     cols={50}
-                    className="w-full border p-3"
+                    className="w-full border p-3 bg-gray-50 dark:bg-gray-700"
                     placeholder="توضیحات ساز"
                     required
                     value={fields.instrument_description}

@@ -130,7 +130,7 @@ const EditSongForm = () => {
                 <input
                     name="song_title"
                     type="text"
-                    className="w-full h-12 border p-3"
+                    className="w-full h-12 border p-3 bg-gray-50 dark:bg-gray-700"
                     placeholder="نام موسیقی"
                     required
                     value={fields.song_title}
@@ -142,7 +142,7 @@ const EditSongForm = () => {
                 <input
                     name="song_artist"
                     type="text"
-                    className="w-full h-12 border p-3"
+                    className="w-full h-12 border p-3 bg-gray-50 dark:bg-gray-700"
                     placeholder="نوازنده"
                     required
                     value={fields.song_artist}

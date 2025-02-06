@@ -4,6 +4,11 @@ import { fetchBlogs } from "@/lib/requests";
 import jalaali from 'jalaali-js';
 import Image from "next/image";
 
+export const metadata = {
+    title: 'آموزشگاه چهارباغ |خبرنامه',
+    description: 'این صفحه خبرنامه و رویدادهای مهم آموزشگاه موسیقی چهارباغ است.',
+  };
+
 interface IBlog {
       _id: string
       blog_img: string

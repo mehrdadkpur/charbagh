@@ -42,7 +42,7 @@ const ViewCourse = () => {
 
     return (
         <div className="w-full flex justify-center pr-[340px] pl-10 mt-3">
-            <div className="w-full p-5 flex justify-center bg-white rounded-xl">
+            <div className="w-full p-5 flex justify-center rounded-xl">
                 <div className="w-full flex flex-col justify-center items-center gap-y-5">
                     <span className="w-full flex justify-center items-center font-MorabbaMedium text-3xl mb-4">مشخصات دوره</span>
                     <div className="w-full flex flex-col justify-center items-center sm:rounded-lg">
@@ -55,19 +55,19 @@ const ViewCourse = () => {
                         />
                         <div className="w-full flex p-3 shadow-xl font-DanaMedium rounded-lg">
                             <div className="w-full flex flex-col gap-y-2 p-3">
-                                <div className="flex justify-start items-center gap-x-6 bg-slate-100 rounded-md p-2 hover:bg-slate-300">
+                                <div className="flex justify-start items-center gap-x-6 rounded-md p-2 hover:bg-slate-300">
                                     <span>نام دوره:</span>
                                     <span className="text-xl">{course.course_name}</span>
                                 </div>
-                                <div className="flex justify-start items-center gap-x-6 bg-slate-100 rounded-md p-2 hover:bg-slate-300">
+                                <div className="flex justify-start items-center gap-x-6 rounded-md p-2 hover:bg-slate-300">
                                     <span>اساتید دوره:</span>
                                     <span className="text-xl">{course.course_teachers?.join(' ، ')}</span>
                                 </div>
-                                <div className="flex justify-start items-center gap-x-6 bg-slate-100 rounded-md p-2 hover:bg-slate-300">
+                                <div className="flex justify-start items-center gap-x-6 rounded-md p-2 hover:bg-slate-300">
                                     <span>درباره دوره:</span>
                                     <span className="text-xl">{course.course_description}</span>
                                 </div>
-                                <div className="flex justify-start items-center gap-x-6 bg-slate-100 rounded-md p-2 hover:bg-slate-300">
+                                <div className="flex justify-start items-center gap-x-6 rounded-md p-2 hover:bg-slate-300">
                                     <span>وضعیت:</span>
                                     <span className="text-xl">{course.course_status}</span>
                                 </div>

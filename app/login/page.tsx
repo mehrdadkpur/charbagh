@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, FormEvent, ChangeEvent } from 'react'
+import { useState, FormEvent, ChangeEvent, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 import toast from 'react-hot-toast'
@@ -21,6 +21,10 @@ export default function Login() {
     password: '',
     role:''
   })
+
+  useEffect(() => {
+        document.title = 'آموزشگاه موسیقی چهارباغ | ورود';
+}, []);
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()

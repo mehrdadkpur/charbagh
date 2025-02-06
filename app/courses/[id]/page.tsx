@@ -36,6 +36,12 @@ const Course = () => {
             fetchCourseData(); 
         } 
     }, [id, course]); 
+
+    useEffect(() => {
+        if (course) {
+            document.title = `دوره آموزشی ${course.course_name}`;
+        }
+    }, [course]);
     
     if (loading) { 
         return <Loading/>; 

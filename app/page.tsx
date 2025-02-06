@@ -1,7 +1,6 @@
 import dynamic from 'next/dynamic'
 import Header from '@/app/ui/main-page/Header'
 
-// Dynamic imports for better performance
 const Courses = dynamic(() => import('@/app/ui/main-page/Courses'))
 const Instruments = dynamic(() => import('@/app/ui/main-page/Instruments'))
 const Teachers = dynamic(() => import('@/app/ui/main-page/Teachers'))

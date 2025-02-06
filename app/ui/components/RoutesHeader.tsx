@@ -10,7 +10,7 @@ interface HeaderProps {
 
 const RoutesHeader = ({pageTitle, boldText, Highlight}:HeaderProps) => {
     return ( 
-        <div className="relative group bg-[#018A75] mb-12 sm:mb-16 md:mb-20 overflow-hidden">
+        <div className="relative group bg-[#018A75] dark:bg-[#25403c] mb-12 sm:mb-16 md:mb-20 overflow-hidden">
             <Navigation/>
             <div className="flex justify-center items-center flex-col gap-y-4 sm:gap-y-5 md:gap-y-6 py-6 sm:py-8 md:py-10">
                 <div className="text-base sm:text-lg text-[#F6BE56] font-Dana">

@@ -84,7 +84,7 @@ const EditBookForm = () => {
                 <input
                     name="book_name"
                     type="text"
-                    className="w-full h-12 border p-3"
+                    className="w-full h-12 border p-3 bg-gray-50 dark:bg-gray-700"
                     placeholder="نام کتاب"
                     required
                     value={fields.book_name}

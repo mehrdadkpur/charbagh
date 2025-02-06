@@ -1,9 +1,10 @@
-import Main from "./Main"
+import DashboardContent from "../ui/components/DashboardContent";
 
-export default function Dashboard (){
+ export default function Dashboard (){
 
     return (
-      <Main/>
+     
+      <div className="relative">                                                                                                             
+        <DashboardContent/>                                                           
+      </div>
     )}
-
-

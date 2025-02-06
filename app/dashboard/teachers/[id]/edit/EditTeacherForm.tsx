@@ -210,7 +210,7 @@ const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTML
     }
 
     return (
-      <form onSubmit={handleSubmit} className="w-full flex justify-center items-center flex-col gap-y-5 font-Dana text-nowrap" >
+      <form onSubmit={handleSubmit} className="w-full flex justify-center items-center flex-col gap-y-5 font-Dana" >
         <div className="w-full grid grid-cols-2 gap-y-5 gap-x-10">
           <div className="w-full flex justify-center items-center gap-x-2">
             <label className="w-1/3" htmlFor="firstname">
@@ -219,7 +219,7 @@ const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTML
             <input
               name="firstname"
               type="text"
-              className="w-2/3 h-12 border p-3"
+              className="w-2/3 h-12 border p-3 bg-gray-50 dark:bg-gray-700"
               placeholder="نام"
               required
               value={fields.firstname}
@@ -234,7 +234,7 @@ const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTML
             <input
               name="lastname"
               type="text"
-              className="w-2/3 h-12 border p-3"
+              className="w-2/3 h-12 border p-3 bg-gray-50 dark:bg-gray-700 "
               placeholder="نام خانوادگی"
               required
               value={fields.lastname}
@@ -242,7 +242,7 @@ const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTML
             />
           </div>
           <div className="w-full flex justify-center items-center gap-x-2 ">
-                  <label className="w-1/3 text-gray-700 ">تاریخ تولد:</label>
+                  <label className="w-1/3">تاریخ تولد:</label>
                   <div className="w-2/3">
                     <ShamsiDatePicker onBirthDateChange={handleBirthDateChange} initialDate={new Date(initialDates.birthDate)}  />
                   </div>
@@ -253,7 +253,7 @@ const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTML
             </label>
             <select
               name="gender"
-              className="w-2/3 h-12 border p-3"
+              className="w-2/3 h-12 border p-3 bg-gray-50 dark:bg-gray-700"
               required
               value={fields.gender}
               onChange={handleChange}
@@ -270,7 +270,7 @@ const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTML
             <input
               name="nationalityNumber"
               type="string"
-              className="w-2/3 h-12 border p-3"
+              className="w-2/3 h-12 border p-3 bg-gray-50 dark:bg-gray-700"
               placeholder=" شماره ملی"
               required
               value={fields.nationalityNumber}
@@ -285,14 +285,14 @@ const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTML
               disabled
               name="teacherId"
               type="number"
-              className="w-2/3 h-12 border p-3"
+              className="w-2/3 h-12 border p-3 bg-gray-50 dark:bg-gray-700"
               placeholder="شماره پرسنلی"
               value={fields.teacherId}
               onChange={handleChange}
             />
           </div>
-          <div className="w-full flex justify-center items-center gap-x-2 ">
-                  <label className="w-1/3 text-gray-700 ">تاریخ شروع همکاری:</label>
+          <div className="w-full flex justify-center items-center gap-x-2">
+                  <label className="w-1/3 ">تاریخ شروع همکاری:</label>
                   <div className="w-2/3">
                     <ShamsiDatePicker onRegistryDateChange={handleRegistryDateChange} initialDate={new Date(initialDates.registryDate)}  />
                   </div>
@@ -304,7 +304,7 @@ const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTML
             <input
               name="mobile"
               type="text"
-              className="w-2/3 h-12 border p-3"
+              className="w-2/3 h-12 border p-3 bg-gray-50 dark:bg-gray-700"
               required
               placeholder="شماره موبایل"
               value={fields.mobile}
@@ -318,7 +318,7 @@ const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTML
             <input
               type="email"
               name="email"
-              className="w-2/3 h-12 border p-3"
+              className="w-2/3 h-12 border p-3 bg-gray-50 dark:bg-gray-700"
               required
               placeholder="آدرس ایمیل"
               value={fields.email}
@@ -332,7 +332,7 @@ const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTML
             <input
               type="text"
               name="address"
-              className="w-2/3 h-12 border p-3"
+              className="w-2/3 h-12 border p-3 bg-gray-50 dark:bg-gray-700"
               required
               placeholder="آدرس منزل"
               value={fields.address}
@@ -345,7 +345,7 @@ const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTML
             </label>
             <select
               name="skill"
-              className="w-2/3 h-12 border p-3"
+              className="w-2/3 h-12 border p-3 bg-gray-50 dark:bg-gray-700"
               required
               value={fields.skill}
               onChange={handleChange}
@@ -368,7 +368,7 @@ const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTML
             <input
               type="text"
               name="password"
-              className="w-2/3 h-12 border p-3"
+              className="w-2/3 h-12 border p-3 bg-gray-50 dark:bg-gray-700"
               placeholder="رمز عبور جدید را وارد کنید"
               value={fields.password}
               onChange={handleChange}
@@ -380,7 +380,7 @@ const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTML
             </label>
             <select
               name="status"
-              className="w-2/3 h-12 border p-3"
+              className="w-2/3 h-12 border p-3 bg-gray-50 dark:bg-gray-700"
               required
               value={fields.status}
               onChange={handleChange}
@@ -396,7 +396,7 @@ const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTML
             </label>
             <select
               name="isAdmin"
-              className="w-2/3 h-12 border p-3"
+              className="w-2/3 h-12 border p-3 bg-gray-50 dark:bg-gray-700"
               required
               value={String(fields.isAdmin)}
               onChange={handleChange}
@@ -414,7 +414,7 @@ const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTML
             </label>
             <textarea
               name="teacher_resume"
-              className="w-5/6 h-96 border p-3"
+              className="w-5/6 h-96 border p-3 bg-gray-50 dark:bg-gray-700"
               placeholder="رزومه"
               required
               value={fields.teacher_resume}
@@ -424,13 +424,13 @@ const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTML
           <div className="w-1/4 flex justify-center items-center flex-col gap-y-3 ">
             <button
               type="submit"
-              className="w-full p-3 bg-green-600 rounded-lg text-center text-white"
+              className="w-full p-3 bg-green-600 rounded-lg text-center"
             >
               ویرایش مشخصات استاد 
             </button>
             <Link
               href={"/dashboard/teachers"}
-              className="w-full p-3 bg-red-600 rounded-lg text-center text-white"
+              className="w-full p-3 bg-red-600 rounded-lg text-center"
             >
               {" "}
               انصراف

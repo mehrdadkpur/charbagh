@@ -112,17 +112,17 @@ export default function PhotoGallery() {
                     </div>
                 ) : (
                     <>
-                        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        <div className="grid grid-cols-2 md:grid-cols-8 gap-4">
                             {currentPhotos.map((photo) => (
                                 <div onMouseEnter={() => setHoveredPhotoId(photo._id)} onMouseLeave={() => setHoveredPhotoId(null)} key={photo._id} className="aspect-square relative overflow-hidden rounded-lg">
                                     <Image 
                                         src={photo.url} 
                                         alt={photo.title} 
                                         fill 
-                                        sizes="(max-width: 768px) 50vw, 33vw" 
+                                        sizes="(max-width: 768px) 20vw, 33vw" 
                                         className="object-cover hover:scale-105 transition-transform duration-500" 
                                     />
-                                    <div className={`absolute bottom-0 w-full bg-black/40 text-white px-4 py-2 transition-transform duration-500 ${hoveredPhotoId === photo._id ? 'translate-y-0' : 'translate-y-full'}`}>
+                                    <div className={`absolute bottom-0 w-full bg-black/60 text-white px-4 py-2 transition-transform duration-500 ${hoveredPhotoId === photo._id ? 'translate-y-0' : 'translate-y-full'}`}>
                                         <div>{photo.title}</div>
                                         <div>{photo.description}</div>
                                         <div>سال {photo.photoDate}</div>

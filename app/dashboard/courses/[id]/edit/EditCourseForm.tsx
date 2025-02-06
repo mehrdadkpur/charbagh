@@ -143,7 +143,7 @@ const EditCourseForm = () => {
                 <input
                 name="course_name"
                 type="text"
-                className="w-full h-12 border p-3"
+                className="w-full h-12 border p-3 bg-gray-50 dark:bg-gray-700"
                 placeholder="نام دوره"
                 required
                 value={fields.course_name}
@@ -154,7 +154,7 @@ const EditCourseForm = () => {
                 <label className="w-1/3" htmlFor="course_description"> درباره: </label>
                 <textarea
                         name="course_description"
-                        className="w-full h-60 border p-3"
+                        className="w-full h-60 border p-3 bg-gray-50 dark:bg-gray-700"
                         placeholder="درباره دوره"
                         required
                         value={fields.course_description}
@@ -167,7 +167,7 @@ const EditCourseForm = () => {
                     </label>
                     <select
                         name="course_status"
-                        className="w-2/3 h-12 border p-3"
+                        className="w-2/3 h-12 border p-3 bg-gray-50 dark:bg-gray-700"
                         required
                         value={fields.course_status}
                         onChange={handleChange}

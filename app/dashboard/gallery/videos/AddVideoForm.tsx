@@ -64,7 +64,7 @@ const handleSubmit = async (e:FormEvent<HTMLFormElement>) => {
         <input
           name="title"
           type="text"
-          className="w-full h-12 border p-3"
+          className="w-full h-12 border p-3 bg-gray-50 dark:bg-gray-700"
           placeholder="نام فیلم"
           required
           value={fields.title}
@@ -79,7 +79,7 @@ const handleSubmit = async (e:FormEvent<HTMLFormElement>) => {
         <input
           name="description"
           type="text"
-          className="w-full h-12 border p-3"
+          className="w-full h-12 border p-3 bg-gray-50 dark:bg-gray-700"
           placeholder=" توضیحات"
           required
           value={fields.description}
@@ -94,7 +94,7 @@ const handleSubmit = async (e:FormEvent<HTMLFormElement>) => {
         <input
           name="url"
           type="text"
-          className="w-full h-12 border p-3"
+          className="w-full h-12 border p-3 bg-gray-50 dark:bg-gray-700"
           placeholder=" آدرس فیلم"
           required
           value={fields.url}
@@ -107,7 +107,7 @@ const handleSubmit = async (e:FormEvent<HTMLFormElement>) => {
         </label>
         <select
           name="videoDate"
-          className="w-2/3 h-12 border p-3"
+          className="w-2/3 h-12 border p-3 bg-gray-50 dark:bg-gray-700"
           required
           onChange={handleChange}
           value={fields.videoDate}
@@ -122,7 +122,7 @@ const handleSubmit = async (e:FormEvent<HTMLFormElement>) => {
           </label>
           <select
             name="category"
-            className="w-2/3 h-12 border p-3"
+            className="w-2/3 h-12 border p-3 bg-gray-50 dark:bg-gray-700"
             required
             value={fields.category}
             onChange={handleChange}
@@ -141,7 +141,7 @@ const handleSubmit = async (e:FormEvent<HTMLFormElement>) => {
         <input
           name="tags"
           type="text"
-          className="w-full h-12 border p-3"
+          className="w-full h-12 border p-3 bg-gray-50 dark:bg-gray-700"
           placeholder="تگ ها"
           required
           value={fields.tags}

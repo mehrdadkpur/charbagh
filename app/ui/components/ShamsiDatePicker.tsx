@@ -54,7 +54,7 @@ const ShamsiDatePicker = ({ onBirthDateChange, onRegistryDateChange, initialDate
                 <select 
                     onChange={handleDateChange} 
                     name="day" 
-                    className="w-full h-12 border p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" 
+                    className="w-full h-12 border p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 bg-gray-50 dark:bg-gray-700" 
                     required 
                     value={selectedDate.day}
                 >
@@ -68,7 +68,7 @@ const ShamsiDatePicker = ({ onBirthDateChange, onRegistryDateChange, initialDate
                 <select 
                     onChange={handleDateChange} 
                     name="month" 
-                    className="w-full h-12 border p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" 
+                    className="w-full h-12 border p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 bg-gray-50 dark:bg-gray-700" 
                     required 
                     value={selectedDate.month}
                 >
@@ -82,7 +82,7 @@ const ShamsiDatePicker = ({ onBirthDateChange, onRegistryDateChange, initialDate
                 <select 
                     onChange={handleDateChange} 
                     name="year" 
-                    className="w-full h-12 border p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500" 
+                    className="w-full h-12 border p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 bg-gray-50 dark:bg-gray-700" 
                     required 
                     value={selectedDate.year}
                 >

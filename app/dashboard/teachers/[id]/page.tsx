@@ -59,64 +59,64 @@ const ViewTeacher = () => {
     const shamsiRegistryDate = jalaali.toJalaali(new Date(teacher.registryDate));
 
     return (
-        <div className="w-full flex justify-center pr-[340px] pl-10 mt-3">
-            <div className="w-full p-5 flex justify-center bg-white rounded-xl">
+        <div className="w-full flex justify-center pr-[340px] pl-10 mt-3 bg-gray-50 dark:bg-gray-900">
+            <div className="w-full p-5 flex justify-center  rounded-xl">
                 <div className="w-full flex flex-col justify-center items-center gap-y-5 ">
-                    <span className="w-full flex justify-center items-center font-MorabbaMedium text-3xl mb-4"> مشخصات استاد </span>
+                    <span className="w-full flex justify-center items-center font-MorabbaMedium text-3xl mb-4"> مشخصات مدرس </span>
                     <div className="w-full flex flex-col gap-y-3 justify-center items-center sm:rounded-lg">
                         <div className="w-40 h-40">
-                            <Image width={40} height={40} src={teacher.mainImg} alt="teacher" className="w-40 h-40 rounded-full" />
+                            <Image width={160} height={160} src={teacher.mainImg} alt="teacher" className="rounded-full" />
                         </div>
-                        <div className="w-full grid grid-cols-1 gap-3 p-3 shadow-xl font-DanaMedium rounded-lg">  
-                            <div className="flex justify-start items-center gap-x-6 bg-slate-100 rounded-md p-2 hover:bg-slate-300">
+                        <div className="w-full grid grid-cols-1 gap-3 p-3 shadow-xl font-DanaMedium rounded-lg border">  
+                            <div className="flex justify-start items-center gap-x-6 rounded-md p-2 hover:bg-slate-300">
                                 <span>نام و نام خانوادگی:</span>
                                 <span className="text-xl">{teacher.firstname}{" "}{teacher.lastname}</span>
                             </div>
-                            <div className="flex justify-start items-center gap-x-6 bg-slate-100 rounded-md p-2 hover:bg-slate-300">
+                            <div className="flex justify-start items-center gap-x-6 rounded-md p-2 hover:bg-slate-300">
                                 <span> شماره ملی:</span>
                                 <span className="text-xl">{teacher.nationalityNumber}</span>
                             </div>
-                            <div className="flex justify-start items-center gap-x-6 bg-slate-100 rounded-md p-2 hover:bg-slate-300">
+                            <div className="flex justify-start items-center gap-x-6 rounded-md p-2 hover:bg-slate-300">
                                 <span>  جنسیت:</span>
                                 <span className="text-xl">{teacher.gender}</span>
                             </div>
-                            <div className="flex justify-start items-center gap-x-6 bg-slate-100 rounded-md p-2 hover:bg-slate-300">
+                            <div className="flex justify-start items-center gap-x-6 rounded-md p-2 hover:bg-slate-300">
                                 <span>  شماره موبایل:</span>
                                 <span className="text-xl">{teacher.mobile}</span>
                             </div>
-                            <div className="flex justify-start items-center gap-x-6 bg-slate-100 rounded-md p-2 hover:bg-slate-300"> 
+                            <div className="flex justify-start items-center gap-x-6 rounded-md p-2 hover:bg-slate-300"> 
                                 <span>تاریخ تولد:</span> 
                                 <span className="text-xl"> {shamsiBirthDate.jy}/{shamsiBirthDate.jm}/{shamsiBirthDate.jd} </span> 
                             </div>
-                            <div className="flex justify-start items-center gap-x-6 bg-slate-100 rounded-md p-2 hover:bg-slate-300">
+                            <div className="flex justify-start items-center gap-x-6 rounded-md p-2 hover:bg-slate-300">
                                 <span>   آدرس محل سکونت:</span>
                                 <span className="text-xl">{teacher.address}</span>
                             </div>
-                            <div className="flex justify-start items-center gap-x-6 bg-slate-100 rounded-md p-2 hover:bg-slate-300">
+                            <div className="flex justify-start items-center gap-x-6 rounded-md p-2 hover:bg-slate-300">
                                 <span>  شماره پرسنلی:</span>
                                 <span className="text-xl">{teacher.teacherId}</span>
                             </div>
-                            <div className="flex justify-start items-center gap-x-6 bg-slate-100 rounded-md p-2 hover:bg-slate-300">
+                            <div className="flex justify-start items-center gap-x-6 rounded-md p-2 hover:bg-slate-300">
                                 <span>  تاریخ شروع فعالیت:</span>
                                 <span className="text-xl">{shamsiRegistryDate.jy}/{shamsiRegistryDate.jm}/{shamsiRegistryDate.jd}</span>
                             </div>
-                            <div className="flex justify-start items-center gap-x-6 bg-slate-100 rounded-md p-2 hover:bg-slate-300">
+                            <div className="flex justify-start items-center gap-x-6 rounded-md p-2 hover:bg-slate-300">
                                 <span> وضعیت:</span>
                                 <span className="text-xl">{teacher.status}</span>
                             </div>
-                            <div className="flex justify-start items-center gap-x-6 bg-slate-100 rounded-md p-2 hover:bg-slate-300">
+                            <div className="flex justify-start items-center gap-x-6 rounded-md p-2 hover:bg-slate-300">
                                 <span>  ایمیل:</span>
                                 <span className="text-xl">{teacher.email}</span>
                             </div>
-                            <div className="flex justify-start items-center gap-x-6 bg-slate-100 rounded-md p-2 hover:bg-slate-300">
+                            <div className="flex justify-start items-center gap-x-6 rounded-md p-2 hover:bg-slate-300">
                                 <span>  نقش:</span>
                                 <span className="text-xl">{teacher.isAdmin ? 'مدیر است' : "کاربر عادی است"}</span>
                             </div>
-                            <div className="flex justify-start items-center gap-x-6 bg-slate-100 rounded-md p-2 hover:bg-slate-300">
+                            <div className="flex justify-start items-center gap-x-6 rounded-md p-2 hover:bg-slate-300">
                                 <span>  حوزه فعالیت:</span>
                                 <span className="text-xl">{teacher.skill}</span>
                             </div>
-                            <div className="flex justify-start items-center gap-x-6 bg-slate-100 rounded-md p-2 hover:bg-slate-300">
+                            <div className="flex justify-start items-center gap-x-6 rounded-md p-2 hover:bg-slate-300">
                                 <span>  شرح رزومه:</span>
                                 <span className="text-xl">{teacher.teacher_resume}</span>
                             </div>

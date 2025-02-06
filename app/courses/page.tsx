@@ -8,9 +8,13 @@ interface ICourse{
     course_name:string
     course_description:string
     course_img:string
-    course_teachers:string
-    
+    course_teachers:string  
 }
+
+export const metadata = {
+    title: 'آموزشگاه چهارباغ |دوره ها',
+    description: 'این صفحه دوره های آموزشی آموزشگاه موسیقی چهارباغ است.',
+  };
 
 
 const Courses =async () => {

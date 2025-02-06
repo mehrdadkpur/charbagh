@@ -1,6 +1,12 @@
 import RoutesHeader from "@/app/ui/components/RoutesHeader";
 import PhotoGallery from "../../ui/components/PhotoGallery"
 import Image from "next/image";
+
+export const metadata = {
+  title: 'آموزشگاه چهارباغ | گالری عکس',
+  description: 'این صفحه گالری عکس آموزشگاه موسیقی چهارباغ است.',
+};
+
 const PhotoGalleryPage = () => {
     return ( 
         <div className="bg-[#F6F4EE] dark:bg-gray-900">

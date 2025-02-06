@@ -5,7 +5,7 @@ import StatCard from '@/app/ui/components/DashboardStats'
 
 
 
-const Main = () => {
+const DasboardContent = () => {
     const [stats, setStats] = useState({
         students: 0,
         teachers: 0,
@@ -53,8 +53,8 @@ const Main = () => {
       }, [])
 
     return ( 
-      <div className='flex justify-center items-center min-h-screen mr-96'>
-            <div className="w-full grid grid-cols-4 gap-y-5 rounded-xl dark:bg-darker dark:text-white p-3 dark:dark:bg-darker  ">
+      <div className='flex justify-center items-center min-h-screen pr-96 bg-white dark:bg-gray-900'>
+            <div className="w-full grid grid-cols-4 gap-y-5 rounded-xl p-3">
               <StatCard title="تعداد هنرجو"  count={stats.students} icon={studentSvg}/>
               <StatCard title="تعداد استاد"  count={stats.teachers} icon={teacherSvg}/>
               <StatCard title="تعداد موسیقی"  count={stats.songs} icon={songSvg}/>
@@ -68,4 +68,4 @@ const Main = () => {
      );
 }
  
-export default Main;
+export default DasboardContent;

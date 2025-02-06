@@ -131,7 +131,7 @@ const EditPhotoForm = () => {
           <input
             name="title"
             type="text"
-            className="w-full h-12 border p-3"
+            className="w-full h-12 border p-3 bg-gray-50 dark:bg-gray-700"
             placeholder="نام عکس"
             required
             value={fields.title}
@@ -146,7 +146,7 @@ const EditPhotoForm = () => {
           <input
             name="description"
             type="text"
-            className="w-full h-12 border p-3"
+            className="w-full h-12 border p-3 bg-gray-50 dark:bg-gray-700"
             placeholder=" توضیحات"
             required
             value={fields.description}
@@ -159,7 +159,7 @@ const EditPhotoForm = () => {
           </label>
           <select
             name="photoDate"
-            className="w-2/3 h-12 border p-3"
+            className="w-2/3 h-12 border p-3 bg-gray-50 dark:bg-gray-700"
             required
             onChange={handleChange}
             value={fields.photoDate}
@@ -174,7 +174,7 @@ const EditPhotoForm = () => {
             </label>
             <select
               name="category"
-              className="w-2/3 h-12 border p-3"
+              className="w-2/3 h-12 border p-3 bg-gray-50 dark:bg-gray-700"
               required
               value={fields.category}
               onChange={handleChange}
@@ -193,7 +193,7 @@ const EditPhotoForm = () => {
           <input
             name="tags"
             type="text"
-            className="w-full h-12 border p-3"
+            className="w-full h-12 border p-3 bg-gray-50 dark:bg-gray-700"
             placeholder="تگ ها"
             required
             value={fields.tags}

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import React from "react";
-import Sidebar from "./Sidebar";
+import DashboardSidebar from "../ui/components/DashboardSidebar";
+import DashboardHeader from "../ui/components/DashboardHeader";
 
 export const metadata: Metadata = {
   title: "داشبورد مدیر",
@@ -9,8 +10,9 @@ export const metadata: Metadata = {
 
 export default function DashboardLayout({children,}: Readonly<{ children: React.ReactNode}>) {
   return (
-    <div className=" min-h-screen bg-slate-100">
-      <Sidebar />
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-50 ">
+      <DashboardHeader/>
+      <DashboardSidebar />
       <main className="flex-1">
         {children}
       </main>

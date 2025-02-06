@@ -2,8 +2,15 @@ import RoutesHeader from "@/app/ui/components/RoutesHeader";
 import { fetchComments } from "@/lib/requests";
 import Image from "next/image";
 
+export const metadata = {
+    title: 'آموزشگاه موسیقی چهارباغ |نطرات',
+    description: 'این صفحه نظرات هنرجویان و اساتید و مدرسین آموزشگاه موسیقی چهارباغ است.',
+  };
+
 const Comments = async () => {
     const {comments} = await fetchComments();
+
+    
 
     return ( 
         <section>

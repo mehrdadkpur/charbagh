@@ -141,7 +141,7 @@ const EditInstrumentForm = () => {
                 <input
                     name="instrument_name"
                     type="text"
-                    className="w-full h-12 border p-3"
+                    className="w-full h-12 border p-3 bg-gray-50 dark:bg-gray-700"
                     placeholder="نام ساز"
                     required
                     value={fields.instrument_name}
@@ -153,7 +153,7 @@ const EditInstrumentForm = () => {
                 <input
                     name="instrument_type"
                     type="text"
-                    className="w-full h-12 border p-3"
+                    className="w-full h-12 border p-3 bg-gray-50 dark:bg-gray-700"
                     placeholder="نوع ساز"
                     required
                     value={fields.instrument_type}
@@ -165,7 +165,7 @@ const EditInstrumentForm = () => {
                 <input
                     name="instrument_origin"
                     type="text"
-                    className="w-full h-12 border p-3"
+                    className="w-full h-12 border p-3 bg-gray-50 dark:bg-gray-700"
                     placeholder="مبدا ساز"
                     required
                     value={fields.instrument_origin}
@@ -178,7 +178,7 @@ const EditInstrumentForm = () => {
                     name="instrument_description"
                     rows={10}
                     cols={50}
-                    className="w-full border p-3"
+                    className="w-full border p-3 bg-gray-50 dark:bg-gray-700"
                     placeholder="توضیحات ساز"
                     required
                     value={fields.instrument_description}

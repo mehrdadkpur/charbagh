@@ -82,8 +82,8 @@ const Courses = () => {
         setFilteredCourses(allCourses)
     }
     return ( 
-        <section className="w-full flex justify-center pr-[340px] pl-10 mt-3">
-            <div className="w-full p-5 flex justify-center bg-white rounded-xl">
+        <section className="w-full flex justify-center pr-[340px] pl-10 mt-3 bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-50">
+            <div className="w-full p-5 flex justify-center rounded-xl">
                 <div className="w-full mt-5 ">                   
                     <span className="w-full flex justify-center items-center font-MorabbaMedium text-3xl mb-4">دوره های آموزشگاه</span>
                     <div className="relative w-full overflow-x-auto shadow-md sm:rounded-lg">
@@ -93,10 +93,11 @@ const Courses = () => {
                             <AddButton route={'/dashboard/courses/add-course'}/>  
                         </div>
                                                                         {/* Delete Modal */}
-                        <DeleteModal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} onDelete={handleDeleteCourse}/>
+                        <DeleteModal onDelete={handleDeleteCourse} isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+
                                                                          {/* table */} 
-                        <table className="w-full text-sm text-left font-DanaMedium rtl:text-right text-gray-500 dark:text-gray-400">
-                            <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                        <table className="w-full text-sm text-left font-DanaMedium rtl:text-right">
+                            <thead className="text-xs">
                                 <tr>
                                 <th scope="col" className="px-6 py-3">نام دوره</th>
                                 <th scope="col" className="px-6 py-3">اساتید دوره</th>
@@ -106,7 +107,7 @@ const Courses = () => {
                             </thead>
                             <tbody>
                                 {filteredCourses?.map((course) => (
-                                <tr key={course._id} className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                                <tr key={course._id} className="border-b dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                                     <td className="px-6 py-4">
                                     <div className="flex items-center">
                                         <div className="w-10 h-10 flex-shrink-0">

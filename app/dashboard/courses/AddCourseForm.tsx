@@ -123,7 +123,7 @@ const AddCourseForm = () => {
                 <input
                 name="course_name"
                 type="text"
-                className="w-full h-12 border p-3"
+                className="w-full h-12 border p-3 bg-gray-50 dark:bg-gray-700"
                 placeholder="نام دوره"
                 required
                 value={fields.course_name}
@@ -134,7 +134,7 @@ const AddCourseForm = () => {
                 <label className="w-1/3" htmlFor="course_description"> درباره: </label>
                 <textarea
                         name="course_description"
-                        className="w-full h-60 border p-3"
+                        className="w-full h-60 border p-3 bg-gray-50 dark:bg-gray-700"
                         placeholder="درباره دوره"
                         required
                         value={fields.course_description}
@@ -147,7 +147,7 @@ const AddCourseForm = () => {
                     </label>
                     <select
                         name="course_status"
-                        className="w-2/3 h-12 border p-3"
+                        className="w-2/3 h-12 border p-3 bg-gray-50 dark:bg-gray-700"
                         required
                         value={fields.course_status}
                         onChange={handleChange}
@@ -183,10 +183,10 @@ const AddCourseForm = () => {
             </div>
             <UploadInput uploadedImage={imagePreview} handleImageUpload={handleImageUpload} uploading={uploading} />
             <div className="flex flex-col gap-y-3">
-                <button type="submit" className="p-3 bg-green-600 rounded-lg text-white">
+                <button type="submit" className="p-3 bg-green-600 rounded-lg text-gray-50">
                     ایجاد دوره
                 </button>
-                <Link href="/dashboard/courses" className="p-3 bg-red-600 rounded-lg text-center text-white">
+                <Link href="/dashboard/courses" className="p-3 bg-red-600 rounded-lg text-center text-gray-50">
                     انصراف
                 </Link>
             </div>
