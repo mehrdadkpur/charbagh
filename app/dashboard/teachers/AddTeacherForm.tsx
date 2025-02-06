@@ -184,7 +184,7 @@ if (loading) {
             <input
               name="firstname"
               type="text"
-              className="w-2/3 h-12 border p-3"
+              className="w-2/3 h-12 border p-3 bg-gray-50 dark:bg-gray-700"
               placeholder="نام"
               required
               value={fields.firstname}
@@ -199,7 +199,7 @@ if (loading) {
             <input
               name="lastname"
               type="text"
-              className="w-2/3 h-12 border p-3"
+              className="w-2/3 h-12 border p-3 bg-gray-50 dark:bg-gray-700"
               placeholder="نام خانوادگی"
               required
               value={fields.lastname}
@@ -207,7 +207,7 @@ if (loading) {
             />
           </div>
           <div className="w-full flex justify-center items-center gap-x-2 ">
-                  <label className="w-1/3 text-gray-700 ">تاریخ تولد:</label>
+                  <label className="w-1/3">تاریخ تولد:</label>
                   <div className="w-2/3">
                     <ShamsiDatePicker onBirthDateChange={handleBirthDateChange} initialDate={new Date(initialDates.birthDate)}  />
                   </div>
@@ -218,7 +218,7 @@ if (loading) {
             </label>
             <select
               name="gender"
-              className="w-2/3 h-12 border p-3"
+              className="w-2/3 h-12 border p-3 bg-gray-50 dark:bg-gray-700"
               required
               value={fields.gender}
               onChange={handleChange}
@@ -235,7 +235,7 @@ if (loading) {
             <input
               name="nationalityNumber"
               type="string"
-              className="w-2/3 h-12 border p-3"
+              className="w-2/3 h-12 border p-3 bg-gray-50 dark:bg-gray-700"
               placeholder=" شماره ملی"
               required
               value={fields.nationalityNumber}
@@ -250,14 +250,14 @@ if (loading) {
               disabled
               name="teacherId"
               type="number"
-              className="w-2/3 h-12 border p-3"
+              className="w-2/3 h-12 border p-3 bg-gray-50 dark:bg-gray-700"
               placeholder="شماره پرسنلی"
               value={fields.teacherId}
               onChange={handleChange}
             />
           </div>
           <div className="w-full flex justify-center items-center gap-x-2 ">
-                  <label className="w-1/3 text-gray-700 ">تاریخ شروع همکاری:</label>
+                  <label className="w-1/3">تاریخ شروع همکاری:</label>
                   <div className="w-2/3">
                     <ShamsiDatePicker onRegistryDateChange={handleRegistryDateChange} initialDate={new Date(initialDates.registryDate)}  />
                   </div>
@@ -269,7 +269,7 @@ if (loading) {
             <input
               name="mobile"
               type="text"
-              className="w-2/3 h-12 border p-3"
+              className="w-2/3 h-12 border p-3 bg-gray-50 dark:bg-gray-700"
               required
               placeholder="شماره موبایل"
               value={fields.mobile}
@@ -283,7 +283,7 @@ if (loading) {
             <input
               type="email"
               name="email"
-              className="w-2/3 h-12 border p-3"
+              className="w-2/3 h-12 border p-3 bg-gray-50 dark:bg-gray-700"
               required
               placeholder="آدرس ایمیل"
               value={fields.email}
@@ -297,7 +297,7 @@ if (loading) {
             <input
               type="text"
               name="address"
-              className="w-2/3 h-12 border p-3"
+              className="w-2/3 h-12 border p-3 bg-gray-50 dark:bg-gray-700"
               required
               placeholder="آدرس منزل"
               value={fields.address}
@@ -310,7 +310,7 @@ if (loading) {
             </label>
             <select
               name="skill"
-              className="w-2/3 h-12 border p-3"
+              className="w-2/3 h-12 border p-3 bg-gray-50 dark:bg-gray-700"
               required
               value={fields.skill}
               onChange={handleChange}
@@ -333,7 +333,7 @@ if (loading) {
             <input
               type="text"
               name="password"
-              className="w-2/3 h-12 border p-3"
+              className="w-2/3 h-12 border p-3 bg-gray-50 dark:bg-gray-700"
               placeholder="رمز عبور جدید را وارد کنید"
               value={fields.password}
               onChange={handleChange}
@@ -345,7 +345,7 @@ if (loading) {
             </label>
             <select
               name="status"
-              className="w-2/3 h-12 border p-3"
+              className="w-2/3 h-12 border p-3 bg-gray-50 dark:bg-gray-700"
               required
               value={fields.status}
               onChange={handleChange}
@@ -361,7 +361,7 @@ if (loading) {
             </label>
             <select
               name="isAdmin"
-              className="w-2/3 h-12 border p-3"
+              className="w-2/3 h-12 border p-3 bg-gray-50 dark:bg-gray-700"
               required
               value={String(fields.isAdmin)}
               onChange={handleChange}
@@ -379,7 +379,7 @@ if (loading) {
             </label>
             <textarea
               name="teacher_resume"
-              className="w-5/6 h-96 border p-3"
+              className="w-5/6 h-96 border p-3 bg-gray-50 dark:bg-gray-700"
               placeholder="رزومه"
               required
               value={fields.teacher_resume}
@@ -391,7 +391,7 @@ if (loading) {
               type="submit"
               className="w-full p-3 bg-green-600 rounded-lg text-center text-white"
             >
-              ویرایش مشخصات استاد 
+              افزودن استاد جدید 
             </button>
             <Link
               href={"/dashboard/teachers"}

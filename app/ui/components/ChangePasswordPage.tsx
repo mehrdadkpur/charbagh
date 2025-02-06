@@ -52,7 +52,7 @@ export default function ChangePassword() {
   
 
   return (
-    <div className="max-w-md mx-auto p-6 bg-white rounded-xl shadow-lg">
+    <div className="max-w-md mx-auto p-6 bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-50 rounded-xl shadow-lg">
       <h2 className="text-2xl font-bold mb-6 text-center">تغییر رمز عبور</h2>
       
       <form onSubmit={handleSubmit} className="space-y-4">
@@ -62,7 +62,7 @@ export default function ChangePassword() {
             type="password"
             value={passwords.currentPassword}
             onChange={(e) => setPasswords({...passwords, currentPassword: e.target.value})}
-            className="w-full p-2 border rounded"
+            className="w-full p-2 border rounded bg-gray-50 dark:bg-gray-700"
             required
           />
         </div>
@@ -72,7 +72,7 @@ export default function ChangePassword() {
             type="password"
             value={passwords.newPassword}
             onChange={(e) => setPasswords({...passwords, newPassword: e.target.value})}
-            className="w-full p-2 border rounded"
+            className="w-full p-2 border rounded bg-gray-50 dark:bg-gray-700"
             required
           />
         </div>
@@ -82,7 +82,7 @@ export default function ChangePassword() {
             type="password"
             value={passwords.confirmPassword}
             onChange={(e) => setPasswords({...passwords, confirmPassword: e.target.value})}
-            className="w-full p-2 border rounded"
+            className="w-full p-2 border rounded bg-gray-50 dark:bg-gray-700"
             required
           />
         </div>
