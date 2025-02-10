@@ -84,7 +84,7 @@ const Footer = () => {
                     <div>     
                     <Image width={1920} height={54} src="/images/shapes/footer-2.png" alt="footer" />
                     </div>
-                    <div className=" h-[100px] bg-[#203734]">
+                    <div className="bg-[#203734]">
                         <div className=" w-full text-lg font-DanaMedium text-[#f6f4ee4d] text-center p-5">تمام حقوق مادی و معنوی این سایت متعلق به <span className="text-mango">آموزشگاه موسیقی چهارباغ</span> میباشد.</div>
                         <p className="w-full text-sm font-DanaMedium text-[#f6f4ee4d] text-center ">طراحی، توسعه و اجرا توسط <Link className="hover:text-mango" href={"https://www.instagram.com/mkpur69"}>مهرداد کهن پور</Link> </p>
                     </div>

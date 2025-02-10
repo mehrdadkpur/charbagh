@@ -64,79 +64,39 @@ export default function Login() {
   }
 
   return ( 
-    <div className=" w-full h-screen flex items-center pr-20 font-Dana bg-[url('/images/020.jpg')] bg-cover bg-center bg-no-repeat">
-        <div className="lg:w-1/3  rounded-md py-10 shadow-2xl">
-            <div className="w-full py-12 flex justify-center">
-                <div className="flex justify-center items-center flex-col gap-3">
-                    <div className="text-2xl text-greenDark tracking-wide text-center font-MorabbaMedium">
-                        آموزشگاه موسیقی چهارباغ
-                    </div>
-                    <Link href='/' className="w-16 h-16">
-                        <Image width={64} height={64} src="/images/logo.png" alt="logo" />
-                    </Link>
-                </div>
-            </div>
-            <div className="px-12 sm:px-24">
-                <h2 className="text-2xl text-mango font-DanaDemiBold xl:text-xl">
-                    ورود به صفحه کاربری
-                </h2>
-                <div className="mt-12">
-                    <form onSubmit={handleSubmit}>
-                        <div className='flex flex-col gap-y-5'>
-                            <div className="mt-4">
-                                <select required name="role" value={formData.role} onChange={handleChange} className="w-full bg-transparent border-b border-gray-300" >
-                                    <option value="">نقش خود را انتخاب نمایید</option>
-                                    <option value="teacher">استاد</option>
-                                    <option value="student">هنرحو</option>
-                                </select>
-                            </div>
-                            <div>
-                                <div className="text-sm font-bold text-gray-700"> کد ملی </div>
-                                <input 
-                                    className="w-full bg-transparent text-lg py-2 border-b border-gray-300 focus:outline-none focus:border-mango" 
-                                    type="text"
-                                    name="nationalityNumber"
-                                    value={formData.nationalityNumber}
-                                    onChange={handleChange}
-                                    placeholder="کد ملی خود را وارد نمایید"
-                                />
-                            </div>       
+    <section className=" h-screen bg-gray-50 dark:bg-gray-900">
+        <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
+            <Link href="/" className="flex flex-col items-center gap-y-3 mb-6 text-2xl font-semibold text-gray-900 dark:text-white">
+                <Image width={75} height={75} src="/images/logo.png" alt="logo"/>
+                <div className="md:text-2xl lg:text-3xl text-[#F6F4EE] font-MorabbaBold text-center flex justify-center items-center">آمـوزشگاه موسیقـی <span className=" bg-mango md:py-2 px-2 rounded-2xl text-greenDark">چهــــاربـــاغ</span></div>
+                </Link>
+            <div className="w-full bg-white rounded-lg shadow-md dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
+                <div className="p-6 space-y-4 md:space-y-6 sm:p-8">
+                    <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
+                        ورود به حساب کاربری
+                    </h1>
+                    <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6" action="#">
+                        <div className="mt-4 text-gray-900 dark:text-gray-50">
+                            <select required name="role" value={formData.role} onChange={handleChange} className="w-full bg-gray-50 py-3 rounded-xl dark:bg-gray-700 " >
+                                <option value="">نقش خود را انتخاب نمایید</option>
+                                <option value="teacher">استاد</option>
+                                <option value="student">هنرحو</option>
+                            </select>
                         </div>
-                        <div className="mt-8">
-                            <div className="flex justify-between items-center">
-                                <div className="text-sm font-bold text-gray-700 tracking-wide">
-                                    رمز عبور
-                                </div>
-                                <div>
-                                    {/* <a className="text-xs font-dana text-mango-200 hover:text-mango cursor-pointer">
-                                        فراموشی رمز عبور
-                                    </a> */}
-                                </div>
-                            </div>
-                            <input 
-                                className="w-full bg-transparent text-lg py-2 border-b border-gray-300 focus:outline-none focus:border-mango" 
-                                type="password"
-                                name="password"
-                                value={formData.password}
-                                onChange={handleChange}
-                                placeholder="رمز عبور خود را وارد نمایید"
-                            />
+                        <div>
+                            <label htmlFor="username" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">نام کاربری</label>
+                            <input onChange={handleChange} value={formData.nationalityNumber} type="text" name="nationalityNumber" id="username" className="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="کد ملی" required />
                         </div>
-                        <div className="w-1/2 mt-10 mx-auto">
-                            <button 
-                                type="submit"
-                                className="bg-mango-900 text-gray-100 p-4 w-full rounded-full tracking-wide font-semibold font-display focus:outline-none focus:shadow-outline hover:bg-mango shadow-lg"
-                            >
-                                {loading ? 'در حال ورود...' : 'ورود'}
-                            </button>
+                        <div>
+                            <label htmlFor="password" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">رمز عبور</label>
+                            <input onChange={handleChange} value={formData.password} type="password" name="password" id="password" placeholder="رمز عبور را وارد نمایید" className="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
                         </div>
+                        <button type="submit" className="w-full bg-elf focus:ring-4 focus:outline-none rounded-lg text-sm px-5 py-2.5 text-center">ورود</button>
                     </form>
-                    <div className="mt-12 text-sm font-display font-semibold text-gray-700 text-center">
-                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 )
 
 }

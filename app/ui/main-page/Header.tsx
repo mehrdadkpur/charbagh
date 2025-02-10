@@ -10,7 +10,7 @@ const Header = () => {
           <div className="flex  md:flex justify-center items-center gap-8 lg:gap-20 px-4 xl:px-24">
             {/* Content */}
             <div className="w-full md:w-1/2 flex justify-center items-center text-center md:py-10">
-              <h1 className="w-2/3 text-3xl md:text-4xl lg:text-5xl xl:text-7xl font-MorabbaBold text-gray-900 dark:text-gray-50">
+              <h1 className="w-2/3 text-xl md:text-4xl lg:text-5xl xl:text-7xl font-MorabbaBold text-gray-900 dark:text-gray-50">
                 الهـام بخشیـــدن به زندگـی با{' '}
                 <span className="inline-block mt-3 bg-mango dark:bg-elf px-3 py-1 rounded-xl text-elf dark:text-mango">
                   موسیقی
@@ -19,7 +19,7 @@ const Header = () => {
             </div>
 
             {/* Hero Image */}
-            <div className="md:w-1/2 flex justify-end">
+            <div className="md:w-1/2 p-5 flex justify-end">
               <Image
                 src="/images/Header-Vector.png"
                 alt="Hero illustration"

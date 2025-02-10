@@ -14,7 +14,7 @@ const Teachers =  async () => {
     
     return ( 
             <div className="w-full bg-[#F6F4EE] dark:bg-gray-900">
-                <RoutesHeader pageTitle={'اساتید'} boldText={'اساتــید بــــرتـــــر'} Highlight={'چهــــاربــاغ'}/>                    
+                <RoutesHeader pageTitle={'اساتید'} boldText={'مـــدرسیــن بــــرتـــــر'} Highlight={'چهــــاربــاغ'}/>                    
                 <div className="container">
                     <div>
                         <div className="flex justify-between items-center flex-col gap-y-10">

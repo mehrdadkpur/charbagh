@@ -54,11 +54,11 @@ const Course = () => {
             <div className="w-full bg-[#F6F4EE] dark:bg-gray-900">
                 <RoutesHeader pageTitle={'دوره ها '} boldText={'دوره آموزشی'} Highlight={course.course_name}/>
                 <div className="container relative">
-                    <div className="content flex justify-center items-center flex-col p-5">
-                        <div className="flex justify-center items-center p-3 absolute -top-[200px] bg-white dark:bg-gray-700 rounded-3xl">
-                            <Image width={800} height={600} className="rounded-3xl " src={course.course_img} alt={course.course_name} />
+                    <div className="content flex justify-center items-center flex-col">
+                        <div className="w-[85%] md:w-auto flex justify-center items-center p-4 absolute -top-24 md:-top-[200px] bg-white dark:bg-gray-700 rounded-3xl">
+                            <Image width={800} height={600} className="rounded-3xl" src={course.course_img} alt={course.course_name} />
                         </div>
-                        <div className="w-[80%] text-base font-Dana leading-10 pt-[450px] text-[#152420]/80 dark:text-gray-50">
+                        <div className="md:w-[80%] font-Dana leading-10 pt-60 md:pt-[450px] text-gray-900 dark:text-gray-50">
                         {course.course_description} 
                         </div>
                        
